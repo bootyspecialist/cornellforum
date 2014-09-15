@@ -32,15 +32,14 @@
 		<li>bundle of sticks|bundle of stick <i class="fa fa-long-arrow-right"></i> <code>fratstar</code></li>
 	</ul>
 	<h3>Simple rules for posting on Cornell Forum:</h3>
-	<p>Cornell Forum has a few sensible rules that you must abide by when posting:</p>
+	<p>Cornell Forum has four simple, sensible rules that you must abide by when posting:</p>
 	<ol>
-		<li>Don't attack your peers and/or write nasty things about other people using their name</li>
-		<li>Racists and anti-semites don't belong here</li>
-		<li>Sexists and misogynists don't belong here</li>
-		<li>No porn, please</li>
-		<li>Don't repost low-quality content from 4chan, Reddit or the Misc</li>
+		<li><strong>Don't be mean</strong>: don't attack your peers and/or write nasty things about other people using their name</li>
+		<li><strong>Keep your prejudices at home</strong>: Racists, anti-semites, sexists and misogynists don't belong here</li>
+		<li><strong>Safe for work:</strong> no porn, please</li>
+		<li><strong>Add some value:</strong> don't repost low-quality content from 4chan, Reddit or the Misc</li>
 	</ol>
-	<p>If you consistently don't follow these rules, we'll have to remove your ability to post by deactivating your account.</p>
+	<p>Other than that, you're good to go. If you consistently don't follow these rules, we'll have to remove your ability to post by deactivating your account.</p>
 	<h3>Open source and community-driven:</h3>
 	<p>Cornell Forum is free, open source, driven by the Cornell community and always will be that way. Cornell Forum does not display ads or make money. Cornell Forum exists solely to provide a high-quality place for Cornellians to talk about whatever is on their minds. You can submit pull requests and view our source code on <a target="_blank" href="https://github.com/wnajar/cornellforum">GitHub</a>. Thanks for coming to Cornell Forum!</p>
 	<iframe src="http://gfycat.com/ifr/HalfSmugAmericancicada" frameborder="0" scrolling="no" width="235" height="240" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
