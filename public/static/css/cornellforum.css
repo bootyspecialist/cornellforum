@@ -1,0 +1,197 @@
+body {
+	font-family: 'Open Sans';
+	margin-bottom: 25px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.spacer {
+	margin-bottom: 15px;
+}
+
+.rounded {
+	border-radius: 5px;
+}
+
+/* make the navbar taller */
+.navbar-brand, .navbar-nav li a {
+    line-height: 55px;
+    height: 55px;
+    padding-top: 0;
+    font-size: 14px;
+}
+
+div.navbar {
+	background: #b31b1b;
+	color: #fff;
+	border: none;
+	box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+div.navbar a {
+	color: #fff !important;
+}
+
+div.navbar li:hover {
+	background: rgba(0, 0, 0, 0.08);
+}
+
+a.navbar-brand {
+	font-family: 'Lobster Two';
+	font-size: 35px;
+}
+
+li.logged-in a i {
+	color: #d4c784;
+}
+
+div.thread-preview {
+	margin: 0;
+	padding: 0;
+}
+
+div.vote-arrow {
+	display: inline-block;
+	float: left;
+	padding: 5px 10px;
+	margin: 0 10px 0 0;
+	cursor: pointer;
+}
+
+div.thread-index-content {
+	display: inline-block;
+	float: left;
+}
+
+h2.thread-index-title {
+	margin: 5px 0 8px 0;
+	font-size: 16px;
+}
+
+h2.thread-index-title a {
+	color: #252525;
+	text-decoration: none;
+}
+
+p.thread-index-subtitle {
+	margin: 0 0 5px 0;
+	color: #999;
+}
+
+div#thread-intro {
+	padding: 0 0 25px 0;
+	margin: 0 0 25px 0;
+	border-bottom: 1px dotted #ccc;
+
+}
+
+div#comments {
+	margin: 0 0 25px 0;
+	padding: 0 0 25px 0;
+	border-bottom: 1px dotted #ccc;
+}
+
+h5.comments-header {
+	font-size: 18px;
+	margin: 0 0 15px 0;
+}
+
+a.posting-tips {
+	font-size: 80%;
+}
+
+div#reply-area {
+
+}
+
+h3.thread-title {
+	font-size: 20px;
+	margin: 5px 0 10px 0;
+}
+
+h4.thread-subtitle {
+	font-size: 15px;
+	color: #999;
+}
+
+p.thread-body {
+	margin: 15px 0;
+}
+
+div.comment {
+	margin: 0 0 15px 0;
+}
+
+i.comment-arrow {
+	margin-right: 5px;
+}
+
+p.comment-body {
+	margin: 0 0 5px 0;
+}
+
+p.comment-time {
+	color: #999;
+	margin: 0;
+	font-size: 14px;
+}
+
+div#new-comment-form {
+	margin: 15px 0;
+}
+
+div.formatting-buttons {
+	height: 30px;
+	margin: 0 0 25px 0;
+}
+
+div.formatting-buttons ul {
+	height: 30px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+div.formatting-buttons ul li {
+	display: inline-block;
+	margin: 0 15px 0 0;
+	line-height: 29px;
+	height: 30px;
+	width: 30px;
+	padding: 0;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	outline: 1px dotted #ccc;
+	background: rgba(0, 0, 0, 0.02);
+}
+
+div.formatting-buttons ul li:active {
+	color: #333;
+	background: #ddd;
+}
+
+img.captcha-image {
+	margin: 0 0 10px 0;
+	padding: 5px;
+	background: #eee;
+	border-radius: 5px;
+}
+
+input.captcha-verification {
+	width: 80px;
+}
