@@ -42,8 +42,9 @@ Route::get('frequently-asked-questions', function() {
 Route::get('search', 'SearchController@searchPage');
 Route::get('search/{query}', 'SearchController@search');
 
-//Login and create account
+//Login, create account, logout
 Route::get('account/login', 'UserController@loginPage');
 Route::post('account/login', 'UserController@login');
 Route::get('account/signup', 'UserController@signupPage');
 Route::post('account/login', 'UserController@login');
+Route::get('logout', 'UserController@logout');
