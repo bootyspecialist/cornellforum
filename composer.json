@@ -5,7 +5,6 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"zizaco/entrust": "1.2.*@dev",
 		"zizaco/confide": "~4.0@dev",
 		"mews/captcha": "dev-master"
 	},

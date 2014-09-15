@@ -121,7 +121,6 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Zizaco\Entrust\EntrustServiceProvider',
 		'Zizaco\Confide\ServiceProvider',
 		'Mews\Captcha\CaptchaServiceProvider'
 
@@ -191,7 +190,6 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'Entrust' 		  => 'Zizaco\Entrust\EntrustFacade',
 		'Confide'         => 'Zizaco\Confide\Facade',
 		'Captcha' 	      => 'Mews\Captcha\Facades\Captcha'
 

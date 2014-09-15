@@ -33,13 +33,14 @@ Route::post('comment', function() {
 	return 0;
 });
 
+//Vanity pages
 Route::get('frequently-asked-questions', function() {
-	return 0;
+	return View::make('faq');
 });
 
-Route::get('search', function() {
-	return 0;
-});
+//Search functions
+Route::get('search', 'SearchController@searchPage');
+Route::get('search/{query}', 'SearchController@search');
 
 //Login and create account
 Route::get('account/login', 'UserController@loginPage');
