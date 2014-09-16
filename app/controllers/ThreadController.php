@@ -3,7 +3,13 @@
 class ThreadController extends BaseController {
 
 	public function viewThread($thread_id) {
-		return 0;
+		if ($thread = Thread::find($thread_id)) {
+			return View::make('thread', array('thread' => $thread));
+		} else {
+			App::abort(404);
+		}
+		$thread = Thread::find()
+		return view;
 	}
 
 	public function newThread() {
@@ -18,9 +24,7 @@ class ThreadController extends BaseController {
 		);
 
 		if ($validator->passes()) {
-    		//success! create new thread
 		} else {
-			//failure, return with errors
 			return Redirect::to('thread/new')->withInput()->withErrors($validator);
 		}
 	}
