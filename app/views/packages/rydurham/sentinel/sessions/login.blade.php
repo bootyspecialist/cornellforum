@@ -11,7 +11,7 @@
         {{ Form::open(array('action' => 'Sentinel\SessionController@store')) }}
             <div class="form-group {{ ($errors->has('email')) ? 'has-error' : '' }}">
                 <label class="sr-only" for="email">Email:</label>
-                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'abc123@cornell.edu', 'autofocus')) }}
+                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'shm1@cornell.edu', 'autofocus')) }}
             </div>
             <div class="form-group {{ ($errors->has('password')) ? 'has-error' : '' }}">
                 {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password'))}}

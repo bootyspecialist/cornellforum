@@ -46,3 +46,6 @@ Route::get('search/{query}', 'SearchController@search');
 Route::get('account', function() {
 	return View::make('account');
 });
+Route::get('verification-sent', array('as' => 'verification-sent', function() {
+	return View::make('verificationsent');
+}));
