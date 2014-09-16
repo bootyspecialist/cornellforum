@@ -15,14 +15,6 @@
 	</ul>
 	<p>You use a BBCode tag by wrapping the content you want the tag to apply to inside the tag, just like HTML (if you know HTML). A sample post using BBCode can be written using syntax like this:</p>
 	<pre>[b]some bolded text[/b] and then a [youtube]jD9SwJTg-5U[/youtube] video, and then an [img]http://upload.wikimedia.org/wikipedia/commons/d/d9/Black_BMW_M3_CSL_E46_rr.jpg[/img] pic of a BMW m3</pre>
-	<h3>Commitment to privacy and anonymity:</h3>
-	<p>Cornell Forum is an <strong>anonymous forum</strong> and will always be that way. Our privacy and anonymity commitment to you:</p>
-	<ol>
-	 	<li>We will never show your login information next to any posts or comments you make. Nobody will be able to find out if you made a post</li>
-	 	<li>We will never record your IP address or track what you're doing with crap like Google Analytics</li>
-	 	<li>We will never censor what you have to say as long as it fits within our <a href="#rules">simple rules</a></li>
-	 </ol>
-	 <p>tl;dr we take your privacy and anonymity very seriously.</p>
 	<h3>Wordfilters, a.k.a. poppycocking slot machines what is this chitty chitty bang bang:</h3>
 	<p>You've probably noticed that Cornell Forum has wordfilters. If you write certain words, Cornell Forum will convert them to something else before saving your post. This makes things a silly, perpetuates inside jokes and reminds you not to take yourself too seriously. Wordfilters have been around on iterations of Cornell Forum since 2007. They also (sortof) eliminates unsavory words. The list of wordfilters is as follows:</p>
 	<ul>
@@ -31,16 +23,24 @@
 		<li>salute <i class="fa fa-long-arrow-right"></i> <code>slot machine</code></li>
 		<li>bundle of sticks|bundle of stick <i class="fa fa-long-arrow-right"></i> <code>fratstar</code></li>
 	</ul>
+	<h3>Commitment to privacy and anonymity:</h3>
+	<p>Cornell Forum is an <strong>anonymous forum</strong> and will always be that way. Our privacy and anonymity commitment to you:</p>
+	<ul class="fa-ul">
+	 	<li><i class="fa-li fa fa-times-circle"></i> We will never show your login information next to any posts or comments you make. Nobody will be able to find out if you made a post</li>
+	 	<li><i class="fa-li fa fa-times-circle"></i> We will never record your IP address or track what you're doing with crap like Google Analytics</li>
+	 	<li><i class="fa-li fa fa-times-circle"></i> We will never censor what you have to say as long as it fits within our <a href="#rules">simple rules</a></li>
+	 </ul>
+	 <p>tl;dr we take your privacy and anonymity very seriously.</p>
 	<h3>Simple rules for posting on Cornell Forum:</h3>
 	<p>Cornell Forum has four simple, sensible rules that you must abide by when posting:</p>
-	<ol>
-		<li><strong>Don't be mean</strong>: don't attack your peers and/or write nasty things about other people using their name</li>
-		<li><strong>Keep your prejudices at home</strong>: Racists, anti-semites, sexists and misogynists don't belong here</li>
-		<li><strong>Safe for work:</strong> no porn, please</li>
-		<li><strong>Add some value:</strong> don't repost low-quality content from 4chan, Reddit or the Misc</li>
-	</ol>
+	<ul class="fa-ul">
+		<li><i class="fa-li fa fa-check-circle"></i> <strong>Don't be mean</strong>: don't attack your peers and/or write nasty things about other people using their name</li>
+		<li><i class="fa-li fa fa-check-circle"></i> <strong>Keep your prejudices at home</strong>: Racists, anti-semites, sexists and misogynists don't belong here</li>
+		<li><i class="fa-li fa fa-check-circle"></i> <strong>Safe for work:</strong> no porn or NSFW content, please</li>
+		<li><i class="fa-li fa fa-check-circle"></i> <strong>Add some value:</strong> don't repost low-quality content from 4chan, Reddit or the Misc</li>
+	</ul>
 	<p>Other than that, you're good to go. If you consistently don't follow these rules, we'll have to remove your ability to post by deactivating your account.</p>
-	<h3>Open source and community-driven:</h3>
-	<p>Cornell Forum is free, open source, driven by the Cornell community and always will be that way. Cornell Forum does not display ads or make money. Cornell Forum exists solely to provide a high-quality place for Cornellians to talk about whatever is on their minds. You can submit pull requests and view our source code on <a target="_blank" href="https://github.com/wnajar/cornellforum">GitHub</a>. Thanks for coming to Cornell Forum!</p>
+	<h3>Open source, free as in freedom and community-driven:</h3>
+	<p>Cornell Forum is free as in freedom, open source, driven by the Cornell community and always will be that way. Cornell Forum does not display ads or make money. Cornell Forum exists solely to provide a high-quality place for Cornellians to talk about whatever is on their minds. You can submit pull requests and view our source code on <a target="_blank" href="https://github.com/wnajar/cornellforum">GitHub</a>. Thanks for coming to Cornell Forum!</p>
 	<iframe src="http://gfycat.com/ifr/HalfSmugAmericancicada" frameborder="0" scrolling="no" width="235" height="240" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
 @stop
