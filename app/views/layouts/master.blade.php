@@ -7,7 +7,7 @@
     	<title>Cornell Forum | @yield('title')</title>
     	{{ HTML::style('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css') }}
     	{{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css') }}
-    	{{ HTML::style('http://fonts.googleapis.com/css?family=Lobster+Two|Open+Sans') }}
+    	{{ HTML::style('http://fonts.googleapis.com/css?family=Lobster|Open+Sans') }}
     	{{ HTML::style('/static/css/cornellforum.css') }}
 	</head>
 	<body>
