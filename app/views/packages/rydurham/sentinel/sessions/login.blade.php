@@ -21,7 +21,7 @@
                 {{ ($errors->has('password') ?  $errors->first('password') : '') }}
             </div>
             {{ Form::submit('Login', array('class' => 'btn btn-primary'))}}
-            <a class="btn btn-link" href="{{ route('Sentinel\forgotPasswordForm') }}">Forgot Password</a>
+            <a class="btn btn-link" href="{{ route('Sentinel\forgotPasswordForm') }}">Forgot password?</a>
         {{ Form::close() }}
     </div>
 </div>

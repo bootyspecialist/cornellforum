@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends(Config::get('Sentinel::config.layout'))
 @section('title')
     Create Account
 @stop
