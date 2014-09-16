@@ -35,6 +35,9 @@
 					<li title="insert a quote" class="formatting-button quote" data-action="quote">
 						<i class="fa fa-quote-left"></i>
 					</li>
+					<li title="help" class="formatting-help">
+						<a target="_blank" href="/frequently-asked-questions"><i class="fa fa-question-circle"></i></a>
+					</li>
 				</ul>
 			</div>
 		</div>

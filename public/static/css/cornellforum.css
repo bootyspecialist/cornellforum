@@ -186,7 +186,7 @@ div.formatting-buttons ul {
 
 div.formatting-buttons ul li {
 	display: inline-block;
-	margin: 0 15px 15px 0;
+	margin: 0 15px 10px 0;
 	line-height: 34px;
 	height: 35px;
 	width: 35px;
@@ -194,18 +194,31 @@ div.formatting-buttons ul li {
 	cursor: pointer;
 	text-align: center;
 	text-decoration: none;
-	background: rgba(0, 0, 0, 0.03);
 	font-size: 16px;
 	border-radius: 5px;
+	color: #888;
 }
 
 div.formatting-buttons ul li:hover {
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.05);
 }
 
 div.formatting-buttons ul li:active {
 	color: #333;
 	background: #ddd;
+}
+
+div.formatting-buttons ul li.formatting-help {
+	background: transparent;
+}
+
+div.formatting-buttons ul li.formatting-help:hover {
+	background: transparent;
+	background: rgba(66, 139, 202, 0.05);
+}
+
+li.formatting-help a {
+	display: block;
 }
 
 div.form-group.errors {
