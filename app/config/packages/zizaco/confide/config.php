@@ -81,7 +81,7 @@ return array(
     | requests here.
     |
     */
-    'password_reset_expiration' => 7, // hours
+    'password_reset_expiration' => 3, // hours
 
     /*
     |--------------------------------------------------------------------------

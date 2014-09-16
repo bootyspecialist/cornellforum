@@ -25,8 +25,10 @@ class UsersController extends Controller
      */
     public function store()
     {
+        $input = Input::all();
+        $input['username'] = $input['email'];
         $repo = App::make('UserRepository');
-        $user = $repo->signup(Input::all());
+        $user = $repo->signup($input);
 
         if ($user->id) {
             if (Config::get('confide::signup_email')) {
