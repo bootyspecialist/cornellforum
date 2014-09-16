@@ -11,15 +11,14 @@ class ThreadController extends BaseController {
 	}
 
 	public function newThread() {
-
 		$input = Input::only('title', 'body');
 		$user = Sentry::getUser(); //logged in user
 
 		$validator = Validator::make(
 			$input,
 			array(
-				'title' => array('required', 'between:15,150'),
-				'body' => array('required', 'between:25,2500')
+				'title' => array('required', 'min:15', 'max:150'),
+				'body' => array('required', 'min:25', 'max:2500')
 			)
 		);
 		if ($validator->passes()) {
@@ -31,7 +30,6 @@ class ThreadController extends BaseController {
 				'user_id'=> $user->id
 				//points defaults to 1 via schema
 				//timestamps are automatically set to now()
-
 			));
 			return Redirect::to('thread/' . $new_thread->id . '/' . $new_thread->slug);
 		} else {
