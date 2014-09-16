@@ -1,44 +1,28 @@
-@extends(Config::get('Sentinel::config.layout'))
-
-{{-- Web site Title --}}
+@extends('layouts.master')
 @section('title')
-@parent
-Register
+    Create Account
 @stop
-
-{{-- Content --}}
 @section('content')
-<div class="row">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-12">
+        <p>An account is required to post on Cornell Forum. <u>All posts are completely anonymous</u> and your email address is <u>never</u> displayed next to posts. When you fill out the form below we'll send a validation link to the email address you entered. After validating your email you can post all you want!</p>
+    </div>
+    <div class="col-sm-4">
+        <h4 class="spacer">Create an account:</h4>
         {{ Form::open(array('action' => 'Sentinel\UserController@store')) }}
-
-            <h2>Register New Account</h2>
-
-            <div class="form-group {{ ($errors->has('username')) ? 'has-error' : '' }}">
-                {{ Form::text('username', null, array('class' => 'form-control', 'placeholder' => 'Username')) }}
-                {{ ($errors->has('username') ? $errors->first('username') : '') }}
-            </div>
-
             <div class="form-group {{ ($errors->has('email')) ? 'has-error' : '' }}">
-                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'E-mail')) }}
+                <label class="sr-only" for="email">Email:</label>
+                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Your email address (must be verified!)')) }}
                 {{ ($errors->has('email') ? $errors->first('email') : '') }}
             </div>
-
             <div class="form-group {{ ($errors->has('password')) ? 'has-error' : '' }}">
-                {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password')) }}
+                {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password you will remember')) }}
                 {{ ($errors->has('password') ?  $errors->first('password') : '') }}
             </div>
-
             <div class="form-group {{ ($errors->has('password_confirmation')) ? 'has-error' : '' }}">
-                {{ Form::password('password_confirmation', array('class' => 'form-control', 'placeholder' => 'Confirm Password')) }}
+                {{ Form::password('password_confirmation', array('class' => 'form-control', 'placeholder' => 'Retype your password')) }}
                 {{ ($errors->has('password_confirmation') ?  $errors->first('password_confirmation') : '') }}
             </div>
-            
-            {{ Form::submit('Register', array('class' => 'btn btn-primary')) }}
-            
+            {{ Form::submit('Send verification email', array('class' => 'btn btn-primary')) }}
         {{ Form::close() }}
     </div>
-</div>
-
-
 @stop
