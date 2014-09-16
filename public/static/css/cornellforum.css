@@ -185,13 +185,6 @@ div.formatting-buttons ul li:active {
 	background: #ddd;
 }
 
-img.captcha-image {
-	margin: 0 0 10px 0;
-	padding: 5px;
-	background: #eee;
-	border-radius: 5px;
-}
-
-input.captcha-verification {
-	width: 80px;
+div.form-group.errors {
+	color: #b31b1b;
 }
