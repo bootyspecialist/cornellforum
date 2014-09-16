@@ -170,7 +170,7 @@ div.formatting-buttons {
 	position: absolute;
 	width: 25px !important;
 	top: 15px;
-	right: 40px;
+	right: 20px;
 }
 
 textarea.with-formatting-buttons {
@@ -186,7 +186,7 @@ div.formatting-buttons ul {
 
 div.formatting-buttons ul li {
 	display: inline-block;
-	margin: 0 15px 10px 0;
+	margin: 0 0 5px 0;
 	line-height: 34px;
 	height: 35px;
 	width: 35px;
