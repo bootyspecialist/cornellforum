@@ -26,7 +26,7 @@ Route::post('thread/new', 'ThreadController@newThread');
 Route::get('thread/{thread_id}/{slug?}', array(
 	'as' => 'thread',
 	'uses' => 'ThreadController@viewThread'
-))->where('thread_id', '[1-9]+');
+))->where('thread_id', '[0-9]+');
 
 //Comments
 Route::post('comment/{thread_id}/new', 'CommentController@newComment');
