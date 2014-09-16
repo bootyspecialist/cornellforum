@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-		"cartalyst/sentry": "2.1.*",
+		"zizaco/confide": "~4.0@dev",
 		"mews/captcha": "dev-master"
 	},
 	"autoload": {
