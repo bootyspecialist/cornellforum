@@ -18,7 +18,7 @@
 			<a class="posting-tips pull-right" target="_blank" href="/frequently-asked-questions">want some posting tips?</a>
 			@if(Sentry::check())
 				<div id="new-comment-form">
-					<form action="/comment/{{ thread->id }}/new/" method="post" role="form">
+					<form action="/comment/{{ $thread->id }}/new/" method="post" role="form">
 					</form>
 				</div>
 			@else
