@@ -21,13 +21,11 @@ Route::get('thread/{thread_id}/{slug?}', function() {
 	return View::make('hello');
 })->where('thread_id', '[1-9]+');
 
-Route::get('new-thread', function() {
-	return 0;
+Route::get('thread/new', function() {
+	return View::make('newthread');
 });
 
-Route::post('new-thread', function() {
-	return 0;
-});
+Route::post('thread/new', 'ThreadController@newThread');
 
 Route::post('comment', function() {
 	return 0;
@@ -39,7 +37,9 @@ Route::get('frequently-asked-questions', function() {
 });
 
 //Search functions
-Route::get('search', 'SearchController@searchPage');
+Route::get('search', function() {
+	return View::make('search');
+});
 Route::get('search/{query}', 'SearchController@search');
 
 //Profile page

@@ -3,7 +3,7 @@
 	Search
 @stop
 @section('content')
-	<form role="form" action="/search">
+	<form role="form" action="/search" method="get">
 		<div class="form-group">
 			<label for="search-term" class="sr-only">Search term:</label>
     		<input type="text" class="form-control input-lg" id="search-term" placeholder="Search for something interesting...">
