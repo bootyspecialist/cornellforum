@@ -3,7 +3,7 @@
 	Frequently Asked Questions
 @stop
 @section('content')
-	<p>Cornell Forum is pretty simple, but if you really want to get the most out of it there are a few tips and tricks to know. On this page we'll cover the most commonly used functions to help you get the most of your Cornell Forum experience. We'll also cover the most frequently asked questions.</p>
+	<p>Cornell Forum is pretty simple but if you really want to get the most out of it there are a few tips and tricks to know. On this page we'll cover the most commonly used functions and the most frequently asked questions to help you get the most of your Cornell Forum experience.</p>
 	<h3>Formatting your posts and comments:</h3>
 	<p>You can format your posts and comments on Cornell Forum using a special flavor of <a target="_blank" href="http://en.wikipedia.org/wiki/BBCode">BBCode</a> You can use the tags:</p>
 	<ul>
@@ -16,24 +16,24 @@
 	<p>You use a BBCode tag by wrapping the content you want the tag to apply to inside the tag, just like HTML (if you know HTML). A sample post using BBCode can be written using syntax like this:</p>
 	<pre>[b]some bolded text[/b] and then a [youtube]jD9SwJTg-5U[/youtube] video, and then an [img]http://upload.wikimedia.org/wikipedia/commons/d/d9/Black_BMW_M3_CSL_E46_rr.jpg[/img] pic of a BMW m3</pre>
 	<h3>Wordfilters, a.k.a. poppycocking slot machines what is this chitty chitty bang bang:</h3>
-	<p>You've probably noticed that Cornell Forum has wordfilters. If you write certain words, Cornell Forum will convert them to something else before saving your post. This makes things a silly, perpetuates inside jokes and reminds you not to take yourself too seriously. Wordfilters have been around on iterations of Cornell Forum since 2007. They also (sortof) eliminates unsavory words. The list of wordfilters is as follows:</p>
+	<p>You've probably noticed that Cornell Forum has wordfilters. If you write certain words, Cornell Forum will convert them to something else before saving your post. This makes things a bit silly, perpetuates inside jokes and reminds you not to take yourself too seriously. Wordfilters have been around on iterations of Cornell Forum since 2007. They also (sortof) eliminates unsavory words. The list of wordfilters is as follows:</p>
 	<ul>
 		<li>fugg <i class="fa fa-long-arrow-right"></i> <code>poppycock</code></li>
 		<li>shet <i class="fa fa-long-arrow-right"></i> <code>chitty chitty bang bang</code></li>
-		<li>salute <i class="fa fa-long-arrow-right"></i> <code>slot machine</code></li>
-		<li>bundle of sticks|bundle of stick <i class="fa fa-long-arrow-right"></i> <code>fratstar</code></li>
+		<li>sl00t <i class="fa fa-long-arrow-right"></i> <code>slot machine</code></li>
+		<li>bundle of sticks|stick <i class="fa fa-long-arrow-right"></i> <code>fratstar</code></li>
 	</ul>
 	<h3>Commitment to privacy and anonymity:</h3>
-	<p>Cornell Forum is an <strong>anonymous forum</strong> and will always be that way. Our privacy and anonymity commitment to you:</p>
+	<p>Cornell Forum is an <strong>anonymous forum</strong> and will always be that way. Our privacy and anonymity commitments:</p>
 	<ul class="fa-ul">
 	 	<li><i class="fa-li fa fa-times-circle"></i> We will never show your login information next to any posts or comments you make. Nobody will be able to find out if you made a post</li>
 	 	<li><i class="fa-li fa fa-times-circle"></i> We will never record your IP address or track what you're doing with crap like Google Analytics</li>
-	 	<li><i class="fa-li fa fa-times-circle"></i> We will never censor what you have to say as long as it fits within our <a href="#rules">simple rules</a></li>
+	 	<li><i class="fa-li fa fa-times-circle"></i> We will never censor what you have to say as long as it fits within our <a href="#simple-rules">simple rules</a></li>
 	 </ul>
 	 <p>tl;dr we take your privacy and anonymity very seriously.</p>
 	<h3>Simple rules for posting on Cornell Forum:</h3>
 	<p>Cornell Forum has four simple, sensible rules that you must abide by when posting:</p>
-	<ul class="fa-ul">
+	<ul class="fa-ul" id="simple-rules">
 		<li><i class="fa-li fa fa-check-circle"></i> <strong>Don't be mean</strong>: don't attack your peers and/or write nasty things about other people using their name</li>
 		<li><i class="fa-li fa fa-check-circle"></i> <strong>Keep your prejudices at home</strong>: Racists, anti-semites, sexists and misogynists don't belong here</li>
 		<li><i class="fa-li fa fa-check-circle"></i> <strong>Safe for work:</strong> no porn or NSFW content, please</li>
