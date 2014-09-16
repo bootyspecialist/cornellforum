@@ -4,14 +4,14 @@
 @stop
 @section('content')
     <div class="col-md-12">
-        <p>An account is required to post on Cornell Forum. <u>All posts are completely anonymous</u> and your email address is <u>never</u> displayed next to posts. When you fill out the form below we'll send a validation link to the email address you entered. After validating your email you can post all you want!</p>
+        <h4 class="spacer">Create an account:</h4>
+        <p>Creating an account lets you post on Cornell Forum. All posts are <u>completely anonymous</u> and your email address is <u>never</u> displayed next to them. When you fill out the form below we'll send a verification link to the email address you entered. After validating your email once you can post forever!</p>
     </div>
     <div class="col-sm-5">
-        <h4 class="spacer">Create an account:</h4>
         {{ Form::open(array('action' => 'Sentinel\UserController@store')) }}
             <div class="form-group {{ ($errors->has('email')) ? 'has-error' : '' }}">
                 <label class="sr-only" for="email">Email:</label>
-                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Email address (must be verified!)', 'autofocus')) }}
+                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Email address that you can verify', 'autofocus')) }}
             </div>
             <div class="form-group {{ ($errors->has('password')) ? 'has-error' : '' }}">
                 {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password you will remember')) }}

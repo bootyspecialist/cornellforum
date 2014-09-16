@@ -4,10 +4,10 @@
 @stop
 @section('content')
     <div class="col-md-12">
-        <p>Authenticating with your email address allows you to post new threads and make comments. Remember that <u>all posts are still completely anonymous</u>.</p>
+        <h4 class="spacer">Login:</h4>
+        <p>Logging in allows you to post new threads and make comments anonymously. No captchas, no bull!</p>
     </div>
     <div class="col-sm-3">
-        <h4 class="spacer">Login:</h4>
         {{ Form::open(array('action' => 'Sentinel\SessionController@store')) }}
             <div class="form-group {{ ($errors->has('email')) ? 'has-error' : '' }}">
                 <label class="sr-only" for="email">Email:</label>
