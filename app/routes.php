@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@homePage');
+Route::get('/', array('as' => 'home', 'uses' => 'HomeController@homePage'));
 
 Route::get('page/{page_number}', function() {
 	return View::make('home');
