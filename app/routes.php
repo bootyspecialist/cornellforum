@@ -11,22 +11,24 @@
 |
 */
 
-Route::get('/', array('as' => 'home', 'uses' => 'HomeController@homePage'));
-
+//Homepage and subsequent pages
+Route::get('/', array(
+	'as' => 'home',
+	'uses' => 'HomeController@homePage'
+));
 Route::get('page/{page_number}', function() {
 	return View::make('home');
 })->where('page_number', '[1-9]+');
 
-Route::get('thread/{thread_id}/{slug?}', function() {
-	return View::make('hello');
-})->where('thread_id', '[1-9]+');
-
-Route::get('thread/new', function() {
-	return View::make('newthread');
-});
-
+//Threads
+Route::get('thread/new', function() { return View::make('newthread'); });
 Route::post('thread/new', 'ThreadController@newThread');
+Route::get('thread/{thread_id}/{slug?}', array(
+	'as' => 'thread',
+	'uses' => 'ThreadController@viewThread'
+))->where('thread_id', '[1-9]+');
 
+//Comments
 Route::post('comment', function() {
 	return 0;
 });
