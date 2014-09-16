@@ -11,7 +11,7 @@
         {{ Form::open(array('action' => 'Sentinel\UserController@store')) }}
             <div class="form-group {{ ($errors->has('email')) ? 'has-error' : '' }}">
                 <label class="sr-only" for="email">Email:</label>
-                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Your email address (must be verified!)')) }}
+                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Email address (must be verified!)', 'autofocus')) }}
                 {{ ($errors->has('email') ? $errors->first('email') : '') }}
             </div>
             <div class="form-group {{ ($errors->has('password')) ? 'has-error' : '' }}">
