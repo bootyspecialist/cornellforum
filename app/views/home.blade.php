@@ -3,5 +3,10 @@
 	Home
 @stop
 @section('content')
-	this is some content
+<div class="col-xs-12">
+	<div id="pagination">
+
+	</div>
+</div>
+
 @stop
