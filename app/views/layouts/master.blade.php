@@ -30,8 +30,8 @@
 						<li><a href="/frequently-asked-questions"><i class="fa fa-question-circle"></i></a></li>
 						<li><a target="_blank" href="https://github.com/wnajar/cornellforum"><i class="fa fa-github"></i></a></li>
 						@if (Sentry::check())
-							<li class="logged-in"><a href="/account/profile"><i class="fa fa-check"></i> <i class="fa fa-user"></i></a></li>
-							<li><a title="log out" href="/logout"><i class="fa fa-sign-out"></i></a></li>
+							<li class="logged-in"><a href="/account"><i class="fa fa-check"></i> <i class="fa fa-user"></i></a></li>
+							<li><a title="Log Out" href="/logout"><i class="fa fa-sign-out"></i></a></li>
 						@endif
 					</ul>
 				</div>

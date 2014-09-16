@@ -41,3 +41,8 @@ Route::get('frequently-asked-questions', function() {
 //Search functions
 Route::get('search', 'SearchController@searchPage');
 Route::get('search/{query}', 'SearchController@search');
+
+//Profile page
+Route::get('account', function() {
+	return View::make('account');
+});
