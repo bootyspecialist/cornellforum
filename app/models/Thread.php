@@ -13,5 +13,9 @@ class Thread extends Eloquent implements SluggableInterface {
         'save_to'    => 'slug',
     );
 
+    public function set_title($title) {
+        $this->set_attribute('title', trim($title));
+    }
+
 
 }
