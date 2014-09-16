@@ -6,6 +6,7 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"rydurham/sentinel": "1.*",
+		"cviebrock/eloquent-sluggable": "2.*",
 		"mews/captcha": "dev-master"
 	},
 	"autoload": {

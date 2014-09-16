@@ -122,6 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Sentinel\SentinelServiceProvider',
+		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 		'Mews\Captcha\CaptchaServiceProvider'
 
 	),
