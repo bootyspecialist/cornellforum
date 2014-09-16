@@ -8,7 +8,7 @@
 	</div>
 	<div class="col-sm-4">
 		<h4 class="spacer">Create an account:</h4>
-		<form role="form" method="post" action="{{ URL::to('login') }}" accept-charset="UTF-8">
+		<form role="form" method="post" action="{{ URL::to('signup') }}" accept-charset="UTF-8">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<fieldset>
 		    	<div class="form-group">
