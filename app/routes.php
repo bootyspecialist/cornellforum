@@ -29,9 +29,7 @@ Route::get('thread/{thread_id}/{slug?}', array(
 ))->where('thread_id', '[1-9]+');
 
 //Comments
-Route::post('comment', function() {
-	return 0;
-});
+Route::post('comment/{thread_id}/new', 'CommentController@newComment');
 
 //Vanity pages
 Route::get('frequently-asked-questions', function() {
