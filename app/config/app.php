@@ -123,6 +123,7 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Sentinel\SentinelServiceProvider',
 		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
+		'hisorange\bbcoder\Providers\BBCoderServiceProvider',
 		'Mews\Captcha\CaptchaServiceProvider'
 
 	),
