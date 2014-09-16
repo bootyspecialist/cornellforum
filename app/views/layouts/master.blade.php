@@ -14,7 +14,7 @@
 		<div class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="container">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="/">Cornell Forum</a>
+					<a class="navbar-brand" href="/"><i class="fa fa-comments cornellforum-logo"></i> Cornell Forum</a>
 				</div>
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
@@ -23,7 +23,7 @@
 							<li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
 							<li><a href="/create-account"><i class="fa fa-user"></i> Create Account</a></li>
 						@else
-							<li><a href="/new-thread"><i class="fa fa-plus-circle"></i> New Thread</a></li>
+							<li><a href="/thread/new"><i class="fa fa-plus-circle"></i> New Thread</a></li>
 						@endif
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
