@@ -21,7 +21,7 @@
 						<li><a href="/search"><i class="fa fa-search"></i> Search</a></li>
 						@if (Auth::guest())
 							<li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
-							<li><a href="/register"><i class="fa fa-user"></i> Create Account</a></li>
+							<li><a href="/create-account"><i class="fa fa-user"></i> Create Account</a></li>
 						@else
 							<li><a href="/new-thread"><i class="fa fa-plus-circle"></i> New Thread</a></li>
 						@endif

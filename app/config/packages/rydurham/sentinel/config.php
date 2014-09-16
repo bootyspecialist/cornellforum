@@ -25,7 +25,7 @@ return array(
 
 		'logout'	=> 'logout',
 
-		'register'	=> 'register',
+		'register'	=> 'create-account',
 
 		'resend'	=> 'resend',
 

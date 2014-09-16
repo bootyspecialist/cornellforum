@@ -1,35 +1,28 @@
 @extends(Config::get('Sentinel::config.layout'))
-
-{{-- Web site Title --}}
 @section('title')
-Log In
+    Login
 @stop
-
-{{-- Content --}}
 @section('content')
-<div class="row">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-12">
+        <p>Authenticating with your email address allows you to post new threads and make comments. Remember that <u>all posts are still completely anonymous</u>.</p>
+    </div>
+    <div class="col-sm-3">
+        <h4 class="spacer">Login:</h4>
         {{ Form::open(array('action' => 'Sentinel\SessionController@store')) }}
-
-            <h2 class="form-signin-heading">Sign In</h2>
-
             <div class="form-group {{ ($errors->has('email')) ? 'has-error' : '' }}">
-                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Email', 'autofocus')) }}
-                {{ ($errors->has('email') ? $errors->first('email') : '') }}
+                <label class="sr-only" for="email">Email:</label>
+                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'abc123@cornell.edu', 'autofocus')) }}
             </div>
-
             <div class="form-group {{ ($errors->has('password')) ? 'has-error' : '' }}">
                 {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password'))}}
+            </div>
+            <div class="form-group errors">
+                {{ ($errors->has('email') ? $errors->first('email') : '') }}
                 {{ ($errors->has('password') ?  $errors->first('password') : '') }}
             </div>
-            
-            <label class="checkbox">
-                {{ Form::checkbox('rememberMe', 'rememberMe') }} Remember me
-            </label>
-            {{ Form::submit('Sign In', array('class' => 'btn btn-primary'))}}
+            {{ Form::submit('Login', array('class' => 'btn btn-primary'))}}
             <a class="btn btn-link" href="{{ route('Sentinel\forgotPasswordForm') }}">Forgot Password</a>
         {{ Form::close() }}
     </div>
 </div>
-
 @stop
