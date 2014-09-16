@@ -121,7 +121,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-		'Zizaco\Confide\ServiceProvider',
+		'Sentinel\SentinelServiceProvider',
 		'Mews\Captcha\CaptchaServiceProvider'
 
 	),
