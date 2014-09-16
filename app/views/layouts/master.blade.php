@@ -19,7 +19,7 @@
 				<div class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
 						<li><a href="/search"><i class="fa fa-search"></i> Search</a></li>
-						@if (Auth::guest())
+						@if (!Sentry::check())
 							<li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
 							<li><a href="/create-account"><i class="fa fa-user"></i> Create Account</a></li>
 						@else
@@ -29,7 +29,7 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/frequently-asked-questions"><i class="fa fa-question-circle"></i></a></li>
 						<li><a target="_blank" href="https://github.com/wnajar/cornellforum"><i class="fa fa-github"></i></a></li>
-						@if (Auth::check())
+						@if (Sentry::check())
 							<li class="logged-in"><a href="/account/profile"><i class="fa fa-check"></i> <i class="fa fa-user"></i></a></li>
 							<li><a title="log out" href="/logout"><i class="fa fa-sign-out"></i></a></li>
 						@endif
