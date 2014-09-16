@@ -7,19 +7,17 @@
 		<h4 class="spacer">Post a new thread:</h4>
 	</div>
 	{{ Form::open(array('action' => 'ThreadController@newThread')) }}
-		<div class="col-md-12">
+		<div class="col-md-12 clearfix">
 			<div class="form-group">
 				<label class="sr-only" for="title">Thread title:</label>
 				{{ Form::text('title', null, array('class' => 'form-control input-lg', 'placeholder' => 'Thread title', 'autofocus')) }}
 			</div>
 		</div>
-		<div class="col-md-11">
+		<div class="col-md-12 outer-textarea-container">
 			<div class="form-group">
 				<label class="sr-only" for="body">Thread body:</label>
-				{{ Form::textarea('title', null, array('class' => 'form-control', 'rows' => 15, 'placeholder' => 'Compose something interesting here...', 'autofocus')) }}
+				{{ Form::textarea('title', null, array('class' => 'form-control with-formatting-buttons', 'rows' => 15, 'placeholder' => 'Compose something interesting here...', 'autofocus')) }}
 			</div>
-		</div>
-		<div class="col-md-1">
 			<div class="formatting-buttons">
 				<ul>
 					<li title="insert bolded text" class="formatting-button bold" data-action="bold">
