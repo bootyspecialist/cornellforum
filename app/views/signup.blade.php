@@ -8,7 +8,7 @@
 	</div>
 	<div class="col-sm-4">
 		<h4 class="spacer">Create an account:</h4>
-		<form role="form" method="post" action="/users/create" accept-charset="UTF-8">
+		<form role="form" method="post" action="{{ URL::to('login') }}" accept-charset="UTF-8">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<fieldset>
 		    	<div class="form-group">
@@ -26,18 +26,6 @@
 				<div class="form-group">
 					<img class="captcha-image" src="{{ Captcha::img() }}">
 					<input type="captcha" class="form-control captcha-verification" tabindex="2" placeholder="Captcha" name="captcha" id="captcha">
-				</div>
-				<div class="form-group">
-					@if (Session::get('error'))
-			        	<div class="alert alert-error alert-danger">
-			            	@if (is_array(Session::get('error')))
-			                	{{ head(Session::get('error')) }}
-			                @endif
-			        	</div>
-			        @endif
-			        @if (Session::get('notice'))
-			        	<div class="alert">{{ Session::get('notice') }}</div>
-			        @endif
 				</div>
 				<div class="form-group">
 					<button tabindex="3" type="submit" class="btn btn-primary">Send me a verification email</button>

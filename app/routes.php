@@ -44,7 +44,7 @@ Route::get('search/{query}', 'SearchController@search');
 
 // Confide routes (user management)
 Route::get('users/create', 'UsersController@create');
-Route::post('users/create', 'UsersController@store');
+Route::post('users', 'UsersController@store');
 Route::get('users/login', 'UsersController@login');
 Route::post('users/login', 'UsersController@doLogin');
 Route::get('users/confirm/{code}', 'UsersController@confirm');
