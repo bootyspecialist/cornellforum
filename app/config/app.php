@@ -190,7 +190,6 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'Confide'         => 'Zizaco\Confide\Facade',
 		'Captcha' 	      => 'Mews\Captcha\Facades\Captcha'
 
 	),
