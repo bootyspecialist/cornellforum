@@ -20,8 +20,8 @@
 					<ul class="nav navbar-nav">
 						<li><a href="/search"><i class="fa fa-search"></i> Search</a></li>
 						@if (Auth::guest())
-							<li><a href="/account/login"><i class="fa fa-sign-in"></i> Login</a></li>
-							<li><a href="/account/signup"><i class="fa fa-user"></i> Create Account</a></li>
+							<li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
+							<li><a href="/register"><i class="fa fa-user"></i> Create Account</a></li>
 						@else
 							<li><a href="/new-thread"><i class="fa fa-plus-circle"></i> New Thread</a></li>
 						@endif
@@ -31,7 +31,7 @@
 						<li><a target="_blank" href="https://github.com/wnajar/cornellforum"><i class="fa fa-github"></i></a></li>
 						@if (Auth::check())
 							<li class="logged-in"><a href="/account/profile"><i class="fa fa-check"></i> <i class="fa fa-user"></i></a></li>
-							<li><a title="log out" href="/account/logout"><i class="fa fa-sign-out"></i></a></li>
+							<li><a title="log out" href="/logout"><i class="fa fa-sign-out"></i></a></li>
 						@endif
 					</ul>
 				</div>
