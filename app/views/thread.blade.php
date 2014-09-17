@@ -6,7 +6,7 @@
 	<div class="col-md-12">
 		<div id="thread-intro">
 			<h3 class="thread-title">{{ $thread->title }}</h3>
-			<h4 class="thread-subtitle">{{ $thread->points }} points, x comments, posted {{ $thread->created_at }}</h4>
+			<h4 class="thread-subtitle">{{ $thread->points }} points, x comments, posted {{{ $thread->created_at->diffForHumans() }}}</h4>
 			<p class="thread-body">{{ $thread->body }}</p>
 			<a href="/"><i class="fa fa-angle-double-left"></i> Back to homepage</a>
 		</div>
