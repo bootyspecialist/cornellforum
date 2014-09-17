@@ -68,7 +68,7 @@ li.logged-in a i {
 }
 
 div.thread-preview {
-	margin: 0;
+	margin: 0 0 10px 0;
 	padding: 0;
 }
 
@@ -86,7 +86,7 @@ div.thread-index-content {
 }
 
 h2.thread-index-title {
-	margin: 5px 0 8px 0;
+	margin: 5px 0 5px 0;
 	font-size: 16px;
 }
 
@@ -132,7 +132,7 @@ h3.thread-title {
 }
 
 h4.thread-subtitle {
-	font-size: 15px;
+	font-size: 14px;
 	color: #999;
 }
 

@@ -1,12 +1,12 @@
 @extends('layouts.master')
 @section('title')
-	Thread {{ $thread->id }} - {{ $thread->title }}
+	Thread {{{ $thread->id }}} - {{{ $thread->title }}}
 @stop
 @section('content')
 	<div class="col-md-12">
 		<div id="thread-intro">
-			<h3 class="thread-title">{{ $thread->title }}</h3>
-			<h4 class="thread-subtitle">{{ $thread->points }} points, x comments, posted {{{ $thread->created_at->diffForHumans() }}}</h4>
+			<h3 class="thread-title">{{{ $thread->title }}}</h3>
+			<h4 class="thread-subtitle">{{{ $thread->points }}} {{{ Lang::choice('point|points', $thread->points) }}}, x comments, posted {{{ $thread->created_at->diffForHumans() }}}</h4>
 			<p class="thread-body">{{ $thread->body }}</p>
 			<a href="/"><i class="fa fa-angle-double-left"></i> Back to homepage</a>
 		</div>
