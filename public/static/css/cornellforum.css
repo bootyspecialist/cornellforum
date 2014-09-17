@@ -109,7 +109,7 @@ div#thread-intro {
 
 div#comments {
 	margin: 0 0 25px 0;
-	padding: 0 0 25px 0;
+	padding: 0;
 	border-bottom: 1px dotted #ccc;
 }
 
@@ -152,11 +152,46 @@ p.post-body img {
 }
 
 div.comment {
-	margin: 0 0 15px 0;
+	display: inline-block;
+	position:relative;
+	padding: 15px 25px;
+	margin: 0 0 15px 8px;
+	background: rgba(0, 0, 0, 0.04);
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	word-wrap: break-word;
 }
 
-i.comment-arrow {
-	margin-right: 5px;
+div.comment:not(.comment-op)::after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 9px 9px 9px 0;
+	border-color:  transparent rgba(0, 0, 0, 0.1);
+	display: block;
+	width: 0;
+	z-index: 1;
+	left: -10px;
+	top: 10px;
+}
+
+div.comment-op::after {
+	content: '';
+	position: absolute;
+	border-style: solid;
+	border-width: 9px 9px 9px 0;
+	border-color: transparent rgba(185, 229, 250, 0.6);
+	display: block;
+	width: 0;
+	z-index: 1;
+	left: -10px;
+	top: 10px;
+
+}
+
+div.comment-op {
+	background: #e3f5fd;
+	border: 1px solid #b9e5fa;
 }
 
 p.comment-body {

@@ -4,7 +4,7 @@ class ThreadController extends BaseController {
 
 	public function viewThread($thread_id) {
 		if ($thread = Thread::find($thread_id)) {
-			$comments = null;
+			$comments = Comment::where('thread_id', '=', $thread->id)->orderBy('created_at', 'asc')->get();
 			return View::make('thread', array('thread' => $thread, 'comments' => $comments));
 		} else {
 			App::abort(404);

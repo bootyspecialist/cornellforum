@@ -17,16 +17,22 @@
 			</div>
 			<p class="post-body">{{ $thread->body }}</p>
 		</div>
-		@if ($comments)
-			<div id="comments">
-
+		@if (count($comments) > 0)
+			<div id="comments clearfix">
+				@foreach($comments as $comment)
+					<div class="comment{{ ($comment->user_id == $thread->user_id ? ' comment-op' : '') }}" id="comment-{{{ $comment->id }}}">
+						<p class="comment-body">{{ $comment->body }}</p>
+						<p class="comment-time">{{{ $comment->created_at->diffForHumans() }}} {{ ($comment->user_id == $thread->user_id ? 'by OP' : '') }}</p>
+					</div>
+					<div class="separator"></div>
+				@endforeach
 			</div>
 		@endif
 		<div id="reply-area">
 			<h5 class="new-comment-header">Comment on this thread:</h5>
 			@if(Sentry::check())
 				<div id="new-comment-form">
-					{{ Form::open(array('action' => 'CommentController@newComment')) }}
+					{{ Form::open(array('url' => '/comment/' . $thread->id . '/new')) }}
 						<div class="outer-textarea-container">
 							<div class="form-group">
 								<label class="sr-only" for="body">Thread body:</label>
