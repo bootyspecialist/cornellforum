@@ -14,7 +14,6 @@ class ThreadController extends BaseController {
 	public function newThread() {
 		$input = Input::only('title', 'body');
 		$user = Sentry::getUser(); //logged in user
-
 		$validator = Validator::make(
 			$input,
 			array(
@@ -22,7 +21,6 @@ class ThreadController extends BaseController {
 				'body' => array('required', 'min:25', 'max:2500')
 			)
 		);
-
 		if ($validator->passes()) {
 			$new_thread = Thread::create(array(
 				'title' => e($input['title']),
