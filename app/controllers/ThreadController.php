@@ -22,8 +22,8 @@ class ThreadController extends BaseController {
 				'body' => array('required', 'min:25', 'max:2500')
 			)
 		);
-		if ($validator->passes()) {
 
+		if ($validator->passes()) {
 			$new_thread = Thread::create(array(
 				'title' => e($input['title']),
 				//slugs auto-generated with eloquent-sluggable
