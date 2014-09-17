@@ -19,7 +19,6 @@ class CreateCommentsTable extends Migration {
 			$table->integer('user_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
 			$table->integer('thread_id')->unsigned();
-			$table->foreign('thread_id')->references('id')->on('threads');
 			$table->timestamps();
 		});
 
@@ -32,7 +31,7 @@ class CreateCommentsTable extends Migration {
 	 */
 	public function down()
 	{
-		 Schema::drop('threads');
+		 Schema::drop('comments');
 	}
 
 }
