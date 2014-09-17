@@ -17,6 +17,7 @@ class CreateThreadsTable extends Migration {
 		    $table->string('title');
 			$table->text('body_raw');
 			$table->text('body');
+			$table->string('slug');
 			$table->integer('user_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
 			$table->integer('points')->unsigned()->default(1);
