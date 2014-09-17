@@ -40,6 +40,14 @@
 		<li><i class="fa-li fa fa-check-circle"></i> <strong>Add some value:</strong> don't repost low-quality content from 4chan, Reddit or the Misc</li>
 	</ul>
 	<p>Other than that, you're good to go. If you consistently don't follow these rules, we'll have to remove your ability to post by deactivating your account.</p>
+	<h3>Why can't I downvote threads?</h3>
+	<p>Your account needs to be at least 30 days old before you can downvote threads.</p>
+	<h3>Where do I upload images I want to post?</h3>
+	<p>Cornell Forum only allows externally-hosted images. If you're looking for a place to upload your images, we can recommend:</p>
+	<ul>
+		<li><a target="_blank" href="http://imgur.com">http://imgur.com</a></li>
+		<li><a target="_blank" href="http://min.us">http://min.us</a></li>
+	</ul>
 	<h3>Open source, free as in freedom and community-driven:</h3>
 	<p>Cornell Forum is free as in freedom, open source, driven by the Cornell community and always will be that way. Cornell Forum does not display ads or make money. Cornell Forum exists solely to provide a high-quality place for Cornellians to talk about whatever is on their minds. You can submit pull requests and view our source code on <a target="_blank" href="https://github.com/wnajar/cornellforum">GitHub</a>. Thanks for coming to Cornell Forum!</p>
 	<iframe src="http://gfycat.com/ifr/HalfSmugAmericancicada" frameborder="0" scrolling="no" width="235" height="240" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
