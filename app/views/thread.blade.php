@@ -11,7 +11,7 @@
 			<a href="/"><i class="fa fa-angle-double-left"></i> Back to homepage</a>
 		</div>
 		<div id="comments">
-			<h5 class="comments-header">Comments:</h5>
+
 		</div>
 		<div id="reply-area">
 			<h5 class="comments-header">Comment on this thread:</h5>
