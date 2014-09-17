@@ -7,7 +7,7 @@
 		<div id="thread-intro">
 			<h3 class="thread-title">{{{ $thread->title }}}</h3>
 			<h4 class="thread-subtitle">{{{ $thread->points }}} {{{ Lang::choice('point|points', $thread->points) }}}, x comments, posted {{{ $thread->created_at->diffForHumans() }}}</h4>
-			<p class="thread-body">{{ $thread->body }}</p>
+			<p class="post-body">{{ $thread->body }}</p>
 			<a href="/"><i class="fa fa-angle-double-left"></i> Back to homepage</a>
 		</div>
 		@if ($comments)
