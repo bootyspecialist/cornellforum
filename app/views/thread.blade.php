@@ -14,15 +14,14 @@
 			<h5 class="comments-header">Comments:</h5>
 		</div>
 		<div id="reply-area">
-			<h5 class="comments-header pull-left">Comment on this thread:</h5>
-			<a class="posting-tips pull-right" target="_blank" href="/frequently-asked-questions">want some posting tips?</a>
+			<h5 class="comments-header">Comment on this thread:</h5>
 			@if(Sentry::check())
 				<div id="new-comment-form">
 					{{ Form::open(array('action' => 'CommentController@newComment')) }}
 						<div class="outer-textarea-container">
 							<div class="form-group">
 								<label class="sr-only" for="body">Thread body:</label>
-								{{ Form::textarea('body', null, array('class' => 'form-control with-formatting-buttons', 'rows' => 12, 'placeholder' => 'Compose something interesting here...', 'autofocus')) }}
+								{{ Form::textarea('body', null, array('class' => 'form-control with-formatting-buttons', 'rows' => 12, 'placeholder' => 'Compose something interesting here...')) }}
 							</div>
 							<div class="formatting-buttons">
 								<ul>
