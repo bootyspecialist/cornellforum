@@ -86,7 +86,7 @@ div.thread-index-content {
 }
 
 h2.thread-index-title {
-	margin: 5px 0 5px 0;
+	margin: 5px 0 3px 0;
 	font-size: 16px;
 }
 
@@ -128,12 +128,13 @@ div#reply-area {
 
 h3.thread-title {
 	font-size: 20px;
-	margin: 5px 0 10px 0;
+	margin: 5px 0 5px 0;
 }
 
 h4.thread-subtitle {
 	font-size: 14px;
 	color: #999;
+	margin: 0;
 }
 
 p.thread-body {
