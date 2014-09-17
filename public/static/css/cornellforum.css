@@ -113,8 +113,8 @@ div#comments {
 	border-bottom: 1px dotted #ccc;
 }
 
-h5.comments-header {
-	font-size: 18px;
+h5.new-comment-header {
+	font-size: 16px;
 	margin: 0 0 15px 0;
 }
 

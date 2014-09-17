@@ -10,11 +10,13 @@
 			<p class="thread-body">{{ $thread->body }}</p>
 			<a href="/"><i class="fa fa-angle-double-left"></i> Back to homepage</a>
 		</div>
-		<div id="comments">
+		@if ($comments)
+			<div id="comments">
 
-		</div>
+			</div>
+		@endif
 		<div id="reply-area">
-			<h5 class="comments-header">Comment on this thread:</h5>
+			<h5 class="new-comment-header">Comment on this thread:</h5>
 			@if(Sentry::check())
 				<div id="new-comment-form">
 					{{ Form::open(array('action' => 'CommentController@newComment')) }}
