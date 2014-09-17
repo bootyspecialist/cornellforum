@@ -23,11 +23,12 @@ class ThreadController extends BaseController {
 			)
 		);
 		if ($validator->passes()) {
+
 			$new_thread = Thread::create(array(
 				'title' => e($input['title']),
 				//slugs auto-generated with eloquent-sluggable
 				'body_raw' => e($input['body']),
-				'body' => e($input['body']), //apply BBCode to generate HTML and store it
+				'body' => BBCoder::convert(e($input['body'])), //apply BBCode to generate HTML and store it
 				'user_id'=> $user->id
 				//points defaults to 1 via schema
 				//timestamps are automatically set to now()

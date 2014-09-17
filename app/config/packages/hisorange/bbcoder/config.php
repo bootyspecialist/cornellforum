@@ -2,7 +2,7 @@
 return array(
 	// Loaded config's path.
 	'cpath'	=> __DIR__,
-	
+
 	// Detailed explanations @ http://milesj.me/code/php/decoda
 	'profile' => array(
 		'default'		=> array(
@@ -10,7 +10,7 @@ return array(
 			'parser'	=> array(
 				'open' => '[',
 				'close' => ']',
-				'locale' => 'hu-hu',
+				'locale' => 'en-us',
 				'disabled' => false,
 				'shorthandLinks' => false,
 				'xhtmlOutput' => false,
@@ -26,7 +26,7 @@ return array(
 				'Decoda\Hook\CensorHook' => array(),
 				'Decoda\Hook\ClickableHook' => array(),
 				'Decoda\Hook\CodeHook' => array(),
-				'Decoda\Hook\EmoticonHook' => array('path' => '/assets/imgs/emoticons/', 'extension' => 'png'),
+				'Decoda\Hook\EmoticonHook' => array('path' => '/static/img/emoticons/', 'extension' => 'png'),
 			),
 
 			// Filters being loaded as default.
@@ -45,17 +45,17 @@ return array(
 			),
 
 			// To only parse specific tags, pass an array of whitelisted tags.
-			'whitelist' => array('b', 'u', 'i', 'br', 'hr', 'img', 'youtube'),
+			'whitelist' => array('b', 'i', 'img', 'youtube', 'quote'),
 
 			// To not parse specific tags, pass an array of blacklisted tags.
 			'blacklist' => array(),
 		),
-		
+
 		// Example profile.
 		'comments'	=> array(
 			'whitelist' => array('i', 'b', 'u'),
 		),
 	)
 
-	
+
 );
