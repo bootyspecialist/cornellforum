@@ -162,7 +162,7 @@ div.comment {
 	word-wrap: break-word;
 }
 
-div.comment:not(.comment-op)::after {
+div.comment/*:not(.comment-op)*/::after {
 	content: '';
 	position: absolute;
 	border-style: solid;
@@ -175,7 +175,7 @@ div.comment:not(.comment-op)::after {
 	top: 10px;
 }
 
-div.comment-op::after {
+/*div.comment-op::after {
 	content: '';
 	position: absolute;
 	border-style: solid;
@@ -187,12 +187,12 @@ div.comment-op::after {
 	left: -10px;
 	top: 10px;
 
-}
+}*/
 
-div.comment-op {
+/*div.comment-op {
 	background: #e3f5fd;
 	border: 1px solid #b9e5fa;
-}
+}*/
 
 p.comment-body {
 	margin: 0 0 5px 0;
