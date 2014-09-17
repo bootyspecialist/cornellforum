@@ -134,7 +134,11 @@ h3.thread-title {
 h4.thread-subtitle {
 	font-size: 14px;
 	color: #999;
-	margin: 0;
+	margin: 0 0 10px 0;
+}
+
+div.thread-actions {
+
 }
 
 p.post-body {
@@ -144,8 +148,6 @@ p.post-body {
 p.post-body img {
 	max-width: 600px;
 	max-height: 600px;
-	padding: 8px;
-	background: rgba(0, 0, 0, 0.05);
 	border-radius: 5px;
 }
 
