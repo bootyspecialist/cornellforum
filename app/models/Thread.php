@@ -7,7 +7,7 @@ class Thread extends Eloquent implements SluggableInterface {
 
 	use SluggableTrait;
 
-	protected $fillable = array('title', 'body_raw', 'body', 'user_id');
+	protected $fillable = array('title', 'body_raw', 'body', 'user_id', 'points');
 	protected $sluggable = array(
         'build_from' => 'title',
         'save_to'    => 'slug',
