@@ -1,9 +1,11 @@
-<?php namespace App\Models;
+<?php
 
-use Eloquent;
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableInterface;
+use Cartalyst\Sentry\Users\Eloquent\User as SentryUserModel;
 
-class User extends \Cartalyst\Sentry\Users\Eloquent\User implements UserInterface, RemindableInterface {
+class User extends SentryUserModel {
+
+    public function canDownVote() {
+		return $this->created_at->diff(Carbon::now())->days >= 0;
+	}
 
 }
