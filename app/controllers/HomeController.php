@@ -16,7 +16,7 @@ class HomeController extends BaseController {
 	*/
 
 	public function homePage() {
-		$threads = Thread::orderBy('created_at', 'desc')->take(25)->get();
+		$threads = Thread::orderBy('updated_at', 'desc')->take(25)->get();
 		return View::make('home', array('threads' => $threads));
 	}
 
