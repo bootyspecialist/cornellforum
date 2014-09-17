@@ -4,7 +4,8 @@ class ThreadController extends BaseController {
 
 	public function viewThread($thread_id) {
 		if ($thread = Thread::find($thread_id)) {
-			return View::make('thread', array('thread' => $thread));
+			$comments = null;
+			return View::make('thread', array('thread' => $thread, 'comments' => $comments));
 		} else {
 			App::abort(404);
 		}
