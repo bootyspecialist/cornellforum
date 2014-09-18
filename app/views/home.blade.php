@@ -11,7 +11,7 @@
 				</div> -->
 				<div class="thread-index-content">
 					<h2 class="thread-index-title"><a href="/thread/{{{ $thread->id }}}/{{{ $thread->slug }}}">{{{ $thread->title }}}</a></h3>
-					<p class="thread-index-subtitle">{{{ $thread->points }}} {{{ Lang::choice('point|points', $thread->points) }}}, x comments, posted {{{ $thread->created_at->diffForHumans() }}}</p>
+					<p class="thread-index-subtitle">{{{ $thread->points }}} {{{ Lang::choice('point|points', $thread->points) }}}, {{{ $thread->comments()->count() }}} {{{ Lang::choice('comment|comments', $thread->comments()->count()) }}}, posted {{{ $thread->created_at->diffForHumans() }}}</p>
 				</div>
 			</div>
 		@endforeach
