@@ -13,6 +13,10 @@ class Thread extends Eloquent implements SluggableInterface {
         'save_to'    => 'slug',
     );
 
+    public function comments() {
+        return $this->hasMany('Comment');
+    }
+
     public function set_title($title) {
         $this->set_attribute('title', trim($title));
     }
