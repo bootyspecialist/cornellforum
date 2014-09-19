@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-	//formatting buttons click handler
-	var formattingbuttons = document.querySelectorAll('div.formatting-buttons ul > li.formatting-button');
+	//inserts text to an element at cursor position
 	function insertTextAtCursor(el, text) {
 	    var val = el.value, endIndex, range, doc = el.ownerDocument;
 	    if (typeof el.selectionStart == "number"
@@ -18,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	    }
 	}
 
-	for(var i = 0; i < formattingbuttons.length; i++){
+	//formatting buttons click handler
+	for(var i = 0, formattingbuttons = document.querySelectorAll('div.formatting-buttons ul > li.formatting-button'); i < formattingbuttons.length; i++){
     	formattingbuttons[i].addEventListener('click', function() {
     		var action = this.getAttribute('data-action');
     		var textarea = document.querySelector('textarea.with-formatting-buttons');
