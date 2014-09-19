@@ -40,7 +40,6 @@
 		<div class="container">
 			@yield('content')
 		</div><!-- /.container -->
-		{{ HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js') }}
 		{{ HTML::script('/static/js/cornellforum.js') }}
 	</body>
 </html>
