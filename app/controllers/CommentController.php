@@ -11,7 +11,7 @@ class CommentController extends BaseController {
 		$validator = Validator::make(
 			$input,
 			array(
-				'body' => array('required', 'min:10', 'max:2500')
+				'body' => array('required', 'min:5', 'max:2500')
 			)
 		);
 		if ($validator->passes()) {
