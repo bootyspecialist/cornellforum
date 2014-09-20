@@ -270,13 +270,31 @@ div.form-group.errors {
 	color: #b31b1b;
 }
 
-div.footer {
-	margin-top: 25px;
-	padding: 15px 0px;
+/* sticky footer */
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -50px;
+  /* Pad bottom by footer height */
+  padding: 0 0 50px;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+	height: 50px;
 	background: #ededed;
 	color: #666;
 }
 
-div.footer p {
+#footer p {
 	margin: 0;
+	line-height: 50px;
 }

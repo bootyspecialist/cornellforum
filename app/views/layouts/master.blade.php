@@ -11,35 +11,37 @@
     	{{ HTML::style('/static/css/cornellforum.css') }}
 	</head>
 	<body>
-		<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div id="wrap">
+			<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="/"><i class="fa fa-comments cornellforum-logo"></i> Cornell Forum</a>
+					</div>
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li><a href="/search"><i class="fa fa-search"></i> Search</a></li>
+							@if (!Sentry::check())
+								<li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
+								<li><a href="/create-account"><i class="fa fa-user"></i> Create Account</a></li>
+							@else
+								<li><a href="/thread/new"><i class="fa fa-plus-circle"></i> New Thread</a></li>
+							@endif
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="/frequently-asked-questions"><i class="fa fa-question-circle"></i></a></li>
+							@if (Sentry::check())
+								<li class="logged-in"><a href="/account"><i class="fa fa-check-square"></i></a></li>
+								<li><a title="Log Out" href="/logout"><i class="fa fa-sign-out"></i></a></li>
+							@endif
+						</ul>
+					</div>
+				</div>
+			</div><!-- /.navbar -->
 			<div class="container">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="/"><i class="fa fa-comments cornellforum-logo"></i> Cornell Forum</a>
-				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li><a href="/search"><i class="fa fa-search"></i> Search</a></li>
-						@if (!Sentry::check())
-							<li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
-							<li><a href="/create-account"><i class="fa fa-user"></i> Create Account</a></li>
-						@else
-							<li><a href="/thread/new"><i class="fa fa-plus-circle"></i> New Thread</a></li>
-						@endif
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="/frequently-asked-questions"><i class="fa fa-question-circle"></i></a></li>
-						@if (Sentry::check())
-							<li class="logged-in"><a href="/account"><i class="fa fa-check-square"></i></a></li>
-							<li><a title="Log Out" href="/logout"><i class="fa fa-sign-out"></i></a></li>
-						@endif
-					</ul>
-				</div>
-			</div>
-		</div><!-- /.navbar -->
-		<div class="container">
-			@yield('content')
-		</div><!-- /.container -->
-		<div class="footer">
+				@yield('content')
+			</div><!-- /.container -->
+		</div>
+		<div id="footer">
 			<div class="container">
 				<div class="col-md-12">
 					<p><i class="fa fa-copyright"></i> Cornell Forum is free as in freedom, <a target="_blank" href="https://github.com/wnajar/cornellforum">open source</a>, student-maintained and <strong>not</strong> endorsed in any way by Cornell University.</p>
