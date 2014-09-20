@@ -104,7 +104,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<p class="need-to-login"><a class="btn btn-primary" href="/login"><i class="fa fa-sign-in"></i> Login</a> <a class="btn btn-primary" href="/create-account"><i class="fa fa-user"></i> Create an account</a> Creating an account is even easier than getting into ILR from community college!</p>
+						<p class="need-to-login"><a class="btn btn-primary" href="/login"><i class="fa fa-sign-in"></i> Login</a> <a class="btn btn-primary" href="/create-account"><i class="fa fa-user"></i> Create an account</a> Creating an account is quick and easy, we promise!</p>
 					</div>
 				</div>
 			@endif
