@@ -48,6 +48,14 @@ class ThreadController extends BaseController {
 				//points defaults to 1 via schema
 				//timestamps are automatically set to now()
 			));
+			//also create a positive vote from the user
+			$new_vote = Vote::create(array(
+				'user_id' => $user->id,
+				'thread_id' => $new_thread->id,
+				'sign' => 1
+				//timestamps automatically created
+			));
+			//but don't increment the thread's points because they already default to 1
 			return Redirect::to('thread/' . $new_thread->id . '/' . $new_thread->slug);
 		} else {
 			return Redirect::to('thread/new')->withInput()->withErrors($validator);
