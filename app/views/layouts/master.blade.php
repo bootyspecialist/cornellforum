@@ -44,7 +44,7 @@
 		<div id="footer">
 			<div class="container">
 				<div class="col-md-12">
-					<p><i class="fa fa-copyright"></i> Cornell Forum is free as in freedom, <a target="_blank" href="https://github.com/wnajar/cornellforum">open source</a>, student-maintained and <strong>not</strong> endorsed in any way by Cornell University.</p>
+					<p><i class="fa fa-copyright"></i> Cornell Forum is free as in freedom, <a target="_blank" href="https://github.com/wnajar/cornellforum">open source</a>, and <strong>not</strong> endorsed in any way by Cornell University.</p>
 				</div>
 			</div>
 		</div>
