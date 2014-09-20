@@ -10,16 +10,16 @@ class ThreadController extends BaseController {
 		if (Sentry::check()) {
 			//user is logged in, we should handle thread views
 			$user = Sentry::getUser();
-			if (View::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->exists()) { //check if view for this thread already exists
+			if (Threadview::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->exists()) { //check if view for this thread already exists
 				//nope, create one
-				$new_view = View::create(array(
+				$new_view = Threadview::create(array(
 					'user_id' => $user->id,
 					'thread_id' => $thread->id,
 					//timestamps automatically created
 				));
 			} else {
 				//update the current one
-				$view = View::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->first();
+				$view = Threadview::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->first();
 				$view->touch(); //will update timestamps
 			}
 		}
