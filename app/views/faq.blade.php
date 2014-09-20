@@ -51,6 +51,5 @@
 		</ul>
 		<h3>Open source, free as in freedom and community-driven:</h3>
 		<p>Cornell Forum is free as in freedom, open source, driven by the Cornell community and always will be that way. Cornell Forum does not display ads or make money. Cornell Forum exists solely to provide a high-quality place for Cornellians to talk about whatever is on their minds. You can submit pull requests and view our source code on <a target="_blank" href="https://github.com/wnajar/cornellforum">GitHub</a>. Thanks for coming to Cornell Forum!</p>
-		<iframe src="http://gfycat.com/ifr/HalfSmugAmericancicada" frameborder="0" scrolling="no" width="235" height="240" style="-webkit-backface-visibility: hidden;-webkit-transform: scale(1);" ></iframe>
 	</div>
 @stop
