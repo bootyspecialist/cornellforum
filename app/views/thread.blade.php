@@ -8,12 +8,12 @@
 			<h3 class="thread-title">{{{ $thread->title }}}</h3>
 			<h4 class="thread-subtitle">{{{ $thread->points }}} {{{ Lang::choice('point|points', $thread->points) }}},  {{{ $thread->comments()->count() }}} {{{ Lang::choice('comment|comments', $thread->comments()->count()) }}}, posted {{{ $thread->created_at->diffForHumans() }}}</h4>
 			<div class="thread-actions">
-				@if(Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', 1)->exists())
+				@if(Sentry::check() && Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', 1)->exists())
 					<a class="btn btn-xs btn-success" href="#"><i class="fa fa-check-circle"></i> Voted Up</a>
 				@else
 					<a class="btn btn-xs btn-default{{ (Sentry::check() ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-up"></i> Vote Up</a>
 				@endif
-				@if(Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', -1)->exists())
+				@if(Sentry::check() && Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', -1)->exists())
 					<a class="btn btn-xs btn-danger" href="#"><i class="fa fa-times-circle"></i> Voted Down</a>
 				@else
 					<a class="btn btn-xs btn-default{{ (Sentry::check() && Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30 ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/down"><i class="fa fa-angle-down"></i> Vote Down</a>
@@ -104,7 +104,7 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<p class="need-to-login"><a class="btn btn-primary" href="/login"><i class="fa fa-sign-in"></i> Login</a> or <a class="btn btn-primary" href="/create-account"><i class="fa fa-user"></i> Create an account</a> to post a comment on this thread. Creating an account is quick and easy, we promise! <i class="fa fa-smile-o"></i></p>
+						<p class="need-to-login"><a class="btn btn-primary" href="/login"><i class="fa fa-sign-in"></i> Login</a> <a class="btn btn-primary" href="/create-account"><i class="fa fa-user"></i> Create an account</a> Creating an account is even easier than getting into ILR from community college!</p>
 					</div>
 				</div>
 			@endif
