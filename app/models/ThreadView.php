@@ -1,6 +1,6 @@
 <?php
 
-class View extends Eloquent {
+class ThreadView extends Eloquent {
 
 	protected $fillable = array('user_id', 'thread_id');
 

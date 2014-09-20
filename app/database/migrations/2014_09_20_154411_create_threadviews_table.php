@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateViewsTable extends Migration {
+class CreateThreadViewsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class CreateViewsTable extends Migration {
 	 */
 	public function up() {
 
-		Schema::create('views', function(Blueprint $table) {
+		Schema::create('threadviews', function(Blueprint $table) {
 		    $table->increments('id');
 			$table->integer('user_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
@@ -30,7 +30,7 @@ class CreateViewsTable extends Migration {
 	 */
 	public function down()
 	{
-		 Schema::drop('views');
+		 Schema::drop('threadviews');
 	}
 
 }
