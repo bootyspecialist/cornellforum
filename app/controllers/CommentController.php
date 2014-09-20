@@ -16,8 +16,8 @@ class CommentController extends BaseController {
 		);
 		if ($validator->passes()) {
 			$new_comment = Comment::create(array(
-				'body_raw' => e($input['body']),
-				'body' => BBCoder::convert(e($input['body'])), //apply BBCode to generate HTML and store it
+				'body_raw' => Wordfilter::filter(e($input['body'])),
+				'body' => Wordfilter::filter(BBCoder::convert(e($input['body']))), //apply BBCode to generate HTML and store it
 				'user_id' => $user->id,
 				'thread_id' => $thread->id
 				//timestamps are automatically set to now()
