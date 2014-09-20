@@ -26,7 +26,7 @@ Cornell Forum uses the following frameworks/packages:
  - Bootstrap 3
  - FontAwesome
  - Google Web Fonts
- - jQuery
+ - ~~jQuery~~
 
 ## Other: ##
 ![](http://usatthebiglead.files.wordpress.com/2013/08/creepy-brady.gif?w=500)
