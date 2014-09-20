@@ -1,6 +1,5 @@
 body {
 	font-family: 'Open Sans';
-	margin-bottom: 25px;
 }
 
 h2 {
@@ -269,4 +268,15 @@ li.formatting-help a {
 
 div.form-group.errors {
 	color: #b31b1b;
+}
+
+div.footer {
+	margin-top: 25px;
+	padding: 15px 0px;
+	background: #ededed;
+	color: #666;
+}
+
+div.footer p {
+	margin: 0;
 }

@@ -6,7 +6,7 @@
     	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     	<title>Cornell Forum | @yield('title')</title>
     	{{ HTML::style('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css') }}
-    	{{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css') }}
+    	{{ HTML::style('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') }}
     	{{ HTML::style('http://fonts.googleapis.com/css?family=Lobster|Open+Sans') }}
     	{{ HTML::style('/static/css/cornellforum.css') }}
 	</head>
@@ -28,7 +28,6 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/frequently-asked-questions"><i class="fa fa-question-circle"></i></a></li>
-						<li><a target="_blank" href="https://github.com/wnajar/cornellforum"><i class="fa fa-github"></i></a></li>
 						@if (Sentry::check())
 							<li class="logged-in"><a href="/account"><i class="fa fa-check-square"></i></a></li>
 							<li><a title="Log Out" href="/logout"><i class="fa fa-sign-out"></i></a></li>
@@ -40,6 +39,13 @@
 		<div class="container">
 			@yield('content')
 		</div><!-- /.container -->
+		<div class="footer">
+			<div class="container">
+				<div class="col-md-12">
+					<p><i class="fa fa-copyright"></i> Cornell Forum is free as in freedom, <a target="_blank" href="https://github.com/wnajar/cornellforum">open source</a>, student-maintained and <strong>not</strong> endorsed in any way by Cornell University.</p>
+				</div>
+			</div>
+		</div>
 		{{ HTML::script('/static/js/cornellforum.js') }}
 	</body>
 </html>
