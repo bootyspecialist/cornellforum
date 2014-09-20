@@ -10,9 +10,9 @@
 			<div class="thread-actions">
 				<a class="btn btn-xs btn-default{{ (Sentry::check() ? '' : ' disabled') }}" href="/thread/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-up"></i> Vote Up</a>
 				@if(Sentry::check() && Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30)
-					<a class="btn btn-xs btn-default" href="/thread/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-down"></i> Vote Down</a>
+					<a class="btn btn-xs btn-default" href="/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-down"></i> Vote Down</a>
 				@else
-					<a class="btn btn-xs btn-default disabled not-allowed" href="/thread/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-down"></i> Vote Down</a>
+					<a class="btn btn-xs btn-default disabled not-allowed" href="/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-down"></i> Vote Down</a>
 				@endif
 			</div>
 			<p class="post-body">{{ $thread->body }}</p>
