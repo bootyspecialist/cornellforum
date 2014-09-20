@@ -8,12 +8,8 @@
 			<h3 class="thread-title">{{{ $thread->title }}}</h3>
 			<h4 class="thread-subtitle">{{{ $thread->points }}} {{{ Lang::choice('point|points', $thread->points) }}},  {{{ $thread->comments()->count() }}} {{{ Lang::choice('comment|comments', $thread->comments()->count()) }}}, posted {{{ $thread->created_at->diffForHumans() }}}</h4>
 			<div class="thread-actions">
-				<a class="btn btn-xs btn-default{{ (Sentry::check() ? '' : ' disabled') }}" href="/thread/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-up"></i> Vote Up</a>
-				@if(Sentry::check() && Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30)
-					<a class="btn btn-xs btn-default" href="/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-down"></i> Vote Down</a>
-				@else
-					<a class="btn btn-xs btn-default disabled not-allowed" href="/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-down"></i> Vote Down</a>
-				@endif
+				<a class="btn btn-xs btn-default{{ (Sentry::check() ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-up"></i> Vote Up</a>
+				<a class="btn btn-xs btn-default{{ (Sentry::check() && Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30 ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/down"><i class="fa fa-angle-down"></i> Vote Down</a>
 			</div>
 			<p class="post-body">{{ $thread->body }}</p>
 		</div>
