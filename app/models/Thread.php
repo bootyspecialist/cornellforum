@@ -17,6 +17,10 @@ class Thread extends Eloquent implements SluggableInterface {
         return $this->hasMany('Comment');
     }
 
+    public function votes() {
+        return $this->hasMany('Vote');
+    }
+
     public function set_title($title) {
         $this->set_attribute('title', trim($title));
     }
