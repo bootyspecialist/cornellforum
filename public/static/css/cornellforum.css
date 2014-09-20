@@ -71,14 +71,6 @@ div.thread-preview {
 	padding: 0;
 }
 
-div.vote-arrow {
-	display: inline-block;
-	float: left;
-	padding: 5px 10px;
-	margin: 0 10px 0 0;
-	cursor: pointer;
-}
-
 div.thread-index-content {
 	display: inline-block;
 	float: left;
