@@ -3,12 +3,29 @@
 class ThreadController extends BaseController {
 
 	public function viewThread($thread_id) {
-		if ($thread = Thread::find($thread_id)) {
-			$comments = Comment::where('thread_id', '=', $thread->id)->orderBy('created_at', 'asc')->get();
-			return View::make('thread', array('thread' => $thread, 'comments' => $comments));
-		} else {
+		if (!$thread = Thread::find($thread_id)) {
 			App::abort(404);
 		}
+
+		if (Sentry::check()) {
+			//user is logged in, we should handle thread views
+			$user = Senry::getUser();
+			if (View::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->exists()) { //check if view for this thread already exists
+				//nope, create one
+				$new_view = View::create(array(
+					'user_id' => $user->id,
+					'thread_id' => $thread->id,
+					//timestamps automatically created
+				));
+			} else {
+				//update the current one
+				$view = View::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->first();
+				$view->touch(); //will update timestamps
+			}
+		}
+
+		$comments = Comment::where('thread_id', '=', $thread->id)->orderBy('created_at', 'asc')->get();
+		return View::make('thread', array('thread' => $thread, 'comments' => $comments));
 	}
 
 	public function newThread() {
