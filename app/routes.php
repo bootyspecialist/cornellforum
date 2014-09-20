@@ -32,8 +32,8 @@ Route::get('thread/{thread_id}/{slug?}', array(
 Route::post('comment/{thread_id}/new', 'CommentController@newComment');
 
 //voting
-Route::post('vote/{thread_id}/up', 'VoteController@voteUp');
-Route::post('vote/{thread_id}/down', 'VoteController@voteDown');
+Route::get('vote/{thread_id}/up', 'VoteController@voteUp');
+Route::get('vote/{thread_id}/down', 'VoteController@voteDown');
 
 //vanity pages
 Route::get('frequently-asked-questions', function() {
