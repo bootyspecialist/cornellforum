@@ -20,7 +20,7 @@ Route::get('page/{page_number}', function() {
 	return View::make('home');
 })->where('page_number', '[1-9]+');
 
-//Threads
+//threads
 Route::get('thread/new', function() { return View::make('newthread'); });
 Route::post('thread/new', 'ThreadController@newThread');
 Route::get('thread/{thread_id}/{slug?}', array(
@@ -28,21 +28,25 @@ Route::get('thread/{thread_id}/{slug?}', array(
 	'uses' => 'ThreadController@viewThread'
 ))->where('thread_id', '[0-9]+');
 
-//Comments
+//comments
 Route::post('comment/{thread_id}/new', 'CommentController@newComment');
 
-//Vanity pages
+//voting
+Route::post('vote/{thread_id}/up', 'VoteController@voteUp');
+Route::post('vote/{thread_id}/down', 'VoteController@voteDown');
+
+//vanity pages
 Route::get('frequently-asked-questions', function() {
 	return View::make('faq');
 });
 
-//Search functions
+//search functions
 Route::get('search', function() {
 	return View::make('search');
 });
 Route::get('search/{query}', 'SearchController@search');
 
-//Profile page
+//profile page
 Route::get('account', function() {
 	return View::make('account');
 });
