@@ -20,7 +20,7 @@ class VoteController extends BaseController {
 		));
 
 		$thread->timestamps = false;
-		$thread->score = $thread->score + 1; //add one to thread score
+		$thread->points = $thread->points + 1; //add one to thread points
 		$thread->save();
 
 		return Redirect::to('thread/' . $thread->id . '/' . $thread->slug); //don't use Redirect::back()
@@ -45,7 +45,7 @@ class VoteController extends BaseController {
 		));
 
 		$thread->timestamps = false;
-		$thread->score = $thread->score - 1; //subtract one from thread score
+		$thread->points = $thread->points - 1; //subtract one from thread points
 		$thread->save();
 
 		return Redirect::to('thread/' . $thread->id . '/' . $thread->slug); //don't use Redirect::back()
