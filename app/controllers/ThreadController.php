@@ -9,7 +9,7 @@ class ThreadController extends BaseController {
 
 		if (Sentry::check()) {
 			//user is logged in, we should handle thread views
-			$user = Senry::getUser();
+			$user = Sentry::getUser();
 			if (View::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->exists()) { //check if view for this thread already exists
 				//nope, create one
 				$new_view = View::create(array(
