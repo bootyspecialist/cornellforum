@@ -11,6 +11,8 @@
 				@if(Sentry::check())
 					@if(Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', 1)->exists())
 						<a class="btn btn-xs btn-info" href="#"><i class="fa fa-check-circle"></i> Voted Up</a>
+					@else
+						<a class="btn btn-xs btn-default" href="/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-up"></i> Vote Up</a>
 					@endif
 					@if(Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', -1)->exists())
 						<a class="btn btn-xs btn-danger" href="#"><i class="fa fa-times-circle"></i> Voted Down</a>
