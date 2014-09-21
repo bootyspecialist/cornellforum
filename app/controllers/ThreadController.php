@@ -52,6 +52,7 @@ class ThreadController extends BaseController {
 				//points defaults to 1 via schema
 				//timestamps are automatically set to now()
 			));
+			Sloots::when_will_they_learn($new_thread, $new_thread);
 			//also create a positive vote from the user
 			$new_vote = Vote::create(array(
 				'user_id' => $user->id,
