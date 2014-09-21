@@ -22,23 +22,32 @@ document.addEventListener('DOMContentLoaded', function() {
     	formattingbuttons[i].addEventListener('click', function() {
     		var action = this.getAttribute('data-action');
     		var textarea = document.querySelector('textarea.with-formatting-buttons');
+    		var tag, prompt_action;
     		switch (action) {
 	            case "bold":
-	                insertTextAtCursor(textarea, '[b]bolded text[/b]');
+	            	tag = 'b';
+	            	prompt_action = 'text you want to bold';
 	                break;
 	            case "italic":
-	                insertTextAtCursor(textarea, '[i]italicized text[/i]');
+	            	tag = 'i';
+	            	prompt_action = 'text you want to italicize';
 	                break;
 	            case 'image':
-	                insertTextAtCursor(textarea, '[img]catpicture.jpg[/img]');
+	                prompt_action = 'source of the image file you want to embed';
 	                break;
 	            case 'youtube':
-	                insertTextAtCursor(textarea, '[youtube]fI_xuFA18m4[/youtube]');
+	                tag = 'youtube';
+	            	prompt_action = 'unique video ID (i.e. "fI_xuFA18m4") of the YouTube video you want to embed';
 	                break;
 	            case 'quote':
-	                insertTextAtCursor(textarea, '[quote]quoted text[/quote]');
+	            	tag = 'quote';
+	            	prompt_action = 'text you want to quote';
 	                break;
 	        }
+
+	        var text_to_insert = prompt('Enter the ' + prompt_action + ':');
+	        insertTextAtCursor(textarea, '[' + tag + ']' + text_to_insert + '[' + tag + ']');
+
     	}, false);
     }
 
