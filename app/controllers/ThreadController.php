@@ -73,10 +73,11 @@ class ThreadController extends BaseController {
 			return Redirect::to('/');
 		}
 
-		//delete thread
-		//delete comments
-		//delete votes
-		//delete threadviews?
+		$thread->comments()->delete();
+		$thread->votes()->delete();
+		$thread->threadviews()->delete();
+		$thread->delete();
+		return Redirect::to('/');
 	}
 
 }
