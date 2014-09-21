@@ -19,7 +19,7 @@
 					<a class="btn btn-xs btn-default{{ (Sentry::check() && Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30 ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/down"><i class="fa fa-angle-down"></i> Vote Down</a>
 				@endif
 				@if(Sentry::check() && Sentry::getUser()->id == $thread->user_id)
-					<a href="/delete/thread/{{ $thread->id }}" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete Thread</a>
+					<a href="/delete/thread/{{ $thread->id }}" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
 				@endif
 			</div>
 			<p class="post-body">{{ $thread->body }}</p>
