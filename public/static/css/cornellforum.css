@@ -54,9 +54,10 @@ div.navbar li:hover {
 }
 
 a.navbar-brand {
-	font-family: 'Lobster';
+	font-family: 'Playfair Display';
 	font-size: 35px;
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+	letter-spacing: -1px;
 }
 
 i.cornellforum-logo {
