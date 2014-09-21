@@ -6,7 +6,7 @@
 	<div class="col-md-12">
 		<p>Cornell Forum is pretty simple but if you really want to get the most out of it there are a few tips and tricks to know. On this page we'll cover the most commonly used functions and the most frequently asked questions to help you get the most of your Cornell Forum experience.</p>
 		<h3>Formatting your posts and comments:</h3>
-		<p>You can format your posts and comments on Cornell Forum using a special flavor of <a target="_blank" href="http://en.wikipedia.org/wiki/BBCode">BBCode</a> You can use the tags:</p>
+		<p>You can format your posts and comments on Cornell Forum using a special flavor of <a target="_blank" href="http://en.wikipedia.org/wiki/BBCode">BBCode</a>. You can use the tags:</p>
 		<ul>
 			<li><code>[b]</code> for bolded text</li>
 			<li><code>[i]</code> for italics</li>
