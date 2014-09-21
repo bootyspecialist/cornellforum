@@ -15,7 +15,7 @@
 			<div class="navbar navbar-inverse navbar-static-top" role="navigation">
 				<div class="container">
 					<div class="navbar-header" title="is not endorsed in any way by Cornell University">
-						<a class="navbar-brand" href="/"><img id="shh" src="/static/img/shh.png" height="55"/> Cornell Forum</a>
+						<a class="navbar-brand" href="/"><img id="shh" src="/static/img/shh.png" height="55"/><span class="brand-text">Cornell Forum</span></a>
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">

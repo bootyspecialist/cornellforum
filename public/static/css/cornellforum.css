@@ -60,11 +60,9 @@ a.navbar-brand {
 	letter-spacing: -1px;
 }
 
-i.cornellforum-logo {
-	font-size: 90%;
+span.brand-text {
 	position: relative;
-	top: -3px;
-	color: rgba(255, 255, 255, 0.5);
+	top: -2px;
 }
 
 li.logged-in a i {
