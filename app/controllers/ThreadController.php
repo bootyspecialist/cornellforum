@@ -68,7 +68,7 @@ class ThreadController extends BaseController {
 			return Redirect::to('/');
 		}
 
-		return '[quote]' + $thread->body_raw + '[/quote]';
+		return '[quote]' . $thread->body_raw . '[/quote]';
 	}
 
 	public function deleteThread($thread_id) {
