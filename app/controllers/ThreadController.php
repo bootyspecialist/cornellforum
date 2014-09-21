@@ -62,6 +62,15 @@ class ThreadController extends BaseController {
 		}
 	}
 
+	public function quoteThread($thread_id) {
+		if (!$thread = Thread::find($thread_id)) {
+			//thread doesn't exist
+			return Redirect::to('/');
+		}
+
+		return '[quote]' + $thread->body_raw + '[/quote]';
+	}
+
 	public function deleteThread($thread_id) {
 		if (!$thread = Thread::find($thread_id)) {
 			//thread doesn't exist

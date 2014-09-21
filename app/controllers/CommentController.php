@@ -28,6 +28,15 @@ class CommentController extends BaseController {
 		}
 	}
 
+	public function quoteComment($comment_id) {
+		if (!$comment = Comment::find($comment_id)) {
+			//comment doesn't exist
+			return Redirect::to('/');
+		}
+
+		return '[quote]' + $comment->body_raw + '[/quote]';
+	}
+
 	public function deleteComment($comment_id) {
 		if (!$comment = Comment::find($comment_id)) {
 			//comment doesn't exist
