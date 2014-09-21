@@ -86,6 +86,12 @@
 						</div>
 						<div class="form-group">
 							{{ Form::submit('Post comment', array('class' => 'btn btn-primary'))}}
+							<div class="checkbox checkbox-inline">
+								<label>
+							    	{{ Form::checkbox('no_bump', 'yes') }}
+							    	Don't Bump
+							  	</label>
+							</div>
 						</div>
 					{{ Form::close() }}
 				</div>

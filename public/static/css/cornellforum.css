@@ -197,7 +197,11 @@ div.comment-actions a:hover, div.comment-actions span:hover {
 	color: #999 !important;
 }
 
-div#new-comment-form {
+#new-comment-form {
+	margin: 0;
+}
+
+#new-comment-form .checkbox {
 	margin: 0;
 }
 

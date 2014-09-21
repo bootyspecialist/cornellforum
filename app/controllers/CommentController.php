@@ -3,7 +3,7 @@
 class CommentController extends BaseController {
 
 	public function newComment($thread_id) {
-		$input = Input::only('body');
+		$input = Input::only('body', 'no_bump');
 		$user = Sentry::getUser(); //logged in user
 		if(!$thread = Thread::find($thread_id)) { //make sure thread exists
 			return "You can't comment on a thread that doesn't exist.";
@@ -15,6 +15,9 @@ class CommentController extends BaseController {
 			)
 		);
 		if ($validator->passes()) {
+			if($input['no_bump'] != 'yes') {
+				$thread->touch();
+			}
 			$new_comment = Comment::create(array(
 				'body_raw' => Wordfilter::filter(e($input['body'])),
 				'body' => Wordfilter::filter(BBCoder::convert(e($input['body']))), //apply BBCode to generate HTML and store it
