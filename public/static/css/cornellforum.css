@@ -137,6 +137,10 @@ div.post-body {
 	margin: 5px 0 15px 0;
 }
 
+div.comment div.post-body {
+	margin: 5px 0 10px 0;
+}
+
 div.post-body img {
 	max-width: 600px;
 	max-height: 600px;
@@ -144,6 +148,7 @@ div.post-body img {
 }
 
 div.post-body blockquote {
+	display: inline-block;
 	color: #666;
 	font-size: 14px;
 	margin: 0;
@@ -155,48 +160,9 @@ div.post-body blockquote {
 div.comment {
 	display: inline-block;
 	position:relative;
-	padding: 10px 20px;
-	margin: 0 0 15px 8px;
-	background: rgba(0, 0, 0, 0.04);
-	border: 1px solid #ddd;
-	border-radius: 5px;
-	word-wrap: break-word;
-}
-
-div.comment/*:not(.comment-op)*/::after {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 9px 9px 9px 0;
-	border-color:  transparent rgba(0, 0, 0, 0.1);
-	display: block;
-	width: 0;
-	z-index: 1;
-	left: -10px;
-	top: 10px;
-}
-
-/*div.comment-op::after {
-	content: '';
-	position: absolute;
-	border-style: solid;
-	border-width: 9px 9px 9px 0;
-	border-color: transparent rgba(185, 229, 250, 0.6);
-	display: block;
-	width: 0;
-	z-index: 1;
-	left: -10px;
-	top: 10px;
-
-}*/
-
-/*div.comment-op {
-	background: #e3f5fd;
-	border: 1px solid #b9e5fa;
-}*/
-
-p.comment-body {
+	padding: 10px 0;
 	margin: 0 0 10px 0;
+	word-wrap: break-word;
 }
 
 p.comment-time {
