@@ -62,4 +62,21 @@ class ThreadController extends BaseController {
 		}
 	}
 
+	public function deleteThread($thread_id) {
+		if (!$thread = Thread::find($thread_id)) {
+			//thread doesn't exist
+			return Redirect::to('/');
+		}
+
+		if (Sentry::getUser()->id != $thread->id) {
+			//don't have permission to delete thread
+			return Redirect::to('/');
+		}
+
+		//delete thread
+		//delete comments
+		//delete votes
+		//delete threadviews?
+	}
+
 }

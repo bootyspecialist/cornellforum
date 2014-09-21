@@ -27,6 +27,10 @@ Route::get('thread/{thread_id}/{slug?}', array(
 	'as' => 'thread',
 	'uses' => 'ThreadController@viewThread'
 ))->where('thread_id', '[0-9]+');
+Route::get('delete/thread/{thread_id}', array(
+	'as' => 'delete_thread',
+	'uses' => 'ThreadController@deleteThread'
+))->where('thread_id', '[0-9]+');
 
 //comments
 Route::post('comment/{thread_id}/new', 'CommentController@newComment');
