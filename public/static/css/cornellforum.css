@@ -129,11 +129,12 @@ h4.thread-subtitle {
 }
 
 div.thread-actions {
+	margin: 0 0 15px 0;
 
 }
 
 div.post-body {
-	margin: 15px 0;
+	margin: 5px 0 15px 0;
 }
 
 div.post-body img {
@@ -143,11 +144,12 @@ div.post-body img {
 }
 
 div.post-body blockquote {
+	color: #666;
 	font-size: 14px;
 	margin: 0;
-	padding: 5px 10px;
+	padding: 10px 15px;
 	background: rgba(255, 255, 255, 0.8);
-	border-left: 5px solid #357ebd;
+	border-left: 5px solid #69a3d5;
 }
 
 div.comment {
