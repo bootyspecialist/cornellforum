@@ -68,7 +68,7 @@ class ThreadController extends BaseController {
 			return Redirect::to('/');
 		}
 
-		if (Sentry::getUser()->id != $thread->id) {
+		if (Sentry::getUser()->id != $thread->user_id) {
 			//don't have permission to delete thread
 			return Redirect::to('/');
 		}
