@@ -68,4 +68,27 @@ document.addEventListener('DOMContentLoaded', function() {
     	elems[i].addEventListener('click', are_you_sure, false);
     }
 
+    //click handler to quote threads
+	for(var i = 0, elems = document.querySelectorAll('.quote-this-thread'); i < elems.length; i++){
+    	elems[i].addEventListener('click', function() {
+	    	var textarea = document.querySelector('textarea.with-formatting-buttons');
+	    	reqwest('/quote/thread/' + this.getAttribute('data-thread-id'), function(resp) {
+	    		var quote = resp.quote.replace(/(\r\n|\n|\r)/gm,'');
+	    		insertTextAtCursor(textarea, quote);
+			})
+    	}, false);
+    }
+
+    //click handler to quote comments
+	for(var i = 0, elems = document.querySelectorAll('.quote-this-comment'); i < elems.length; i++){
+    	elems[i].addEventListener('click', function() {
+	    	var textarea = document.querySelector('textarea.with-formatting-buttons');
+	    	reqwest('/quote/comment/' + this.getAttribute('data-comment-id'), function(resp) {
+	    		console.log(resp);
+	    		var quote = resp.quote.replace(/(\r\n|\n|\r)/gm,'');
+	    		insertTextAtCursor(textarea, quote);
+			})
+    	}, false);
+    }
+
 }, false);
