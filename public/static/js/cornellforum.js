@@ -58,7 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //function that makes the user confirm they want to do something
     function are_you_sure(e) {
-        if (!confirm('Are you sure you want to do that?')) e.preventDefault();
+        if (!confirm('Are you sure you want to do that?')) {
+        	e.preventDefault();
+        }
     };
 
     //are you sure? click handler
