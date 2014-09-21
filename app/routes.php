@@ -31,6 +31,10 @@ Route::get('delete/thread/{thread_id}', array(
 
 //comments
 Route::post('comment/{thread_id}/new', 'CommentController@newComment');
+Route::get('delete/comment/{comment_id}', array(
+	'as' => 'delete_comment',
+	'uses' => 'CommentController@deleteComment'
+))->where('comment_id', '[0-9]+');
 
 //voting
 Route::get('vote/{thread_id}/up', 'VoteController@voteUp');

@@ -28,4 +28,20 @@ class CommentController extends BaseController {
 		}
 	}
 
+	public function deleteComment($comment_id) {
+		if (!$comment = Comment::find($comment_id)) {
+			//comment doesn't exist
+			return Redirect::to('/');
+		}
+
+		if (Sentry::getUser()->id != $comment->user_id) {
+			//don't have permission to delete thread
+			return Redirect::to('/');
+		}
+
+		$thread = Thread::find($comment->thread_id); //not sure why $comment->thread() doesn't work here?
+		$comment->delete();
+		return Redirect::to('thread/' . $thread->id . '/' . $thread->slug); //don't use Redirect::back()
+	}
+
 }

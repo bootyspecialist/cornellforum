@@ -29,7 +29,12 @@
 				@foreach($comments as $comment)
 					<div class="comment{{ ($comment->user_id == $thread->user_id ? ' comment-op' : '') }}" id="comment-{{{ $comment->id }}}">
 						<p class="comment-body">{{ $comment->body }}</p>
-						<p class="comment-time">{{{ $comment->created_at->diffForHumans() }}} {{ ($comment->user_id == $thread->user_id ? 'by OP' : '') }}</p>
+						<p class="comment-time">
+							{{{ $comment->created_at->diffForHumans() }}} {{ ($comment->user_id == $thread->user_id ? 'by OP' : '') }}
+							@if(Sentry::check() && Sentry::getUser()->id == $comment->user_id)
+								<a href="/delete/comment/{{ $comment->id }}" class="text-muted delete-comment-button"><i class="fa fa-trash"></i></a>
+							@endif
+						</p>
 					</div>
 					<div class="separator"></div>
 				@endforeach
