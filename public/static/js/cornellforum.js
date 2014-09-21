@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	        if (!text_to_insert) {
 	        	return; //user pressed the cancel button
 	        } else {
-	        	insertTextAtCursor(textarea, '[' + tag + ']' + text_to_insert + '[' + tag + ']');
+	        	insertTextAtCursor(textarea, '[' + tag + ']' + text_to_insert + '[/' + tag + ']');
 	        }
 
     	}, false);
