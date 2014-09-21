@@ -9,7 +9,7 @@
 			<h4 class="thread-subtitle">{{{ $thread->points }}} {{{ Lang::choice('point|points', $thread->points) }}},  {{{ $thread->comments()->count() }}} {{{ Lang::choice('comment|comments', $thread->comments()->count()) }}}, posted {{{ $thread->created_at->diffForHumans() }}}</h4>
 			<div class="thread-actions">
 				@if(Sentry::check() && Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', 1)->exists())
-					<a class="btn btn-xs btn-success" href="#"><i class="fa fa-check-circle"></i> Voted Up</a>
+					<a class="btn btn-xs btn-info" href="#"><i class="fa fa-check-circle"></i> Voted Up</a>
 				@else
 					<a class="btn btn-xs btn-default{{ (Sentry::check() ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-up"></i> Vote Up</a>
 				@endif
