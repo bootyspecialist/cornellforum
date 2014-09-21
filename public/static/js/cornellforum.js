@@ -46,9 +46,24 @@ document.addEventListener('DOMContentLoaded', function() {
 	        }
 
 	        var text_to_insert = prompt('Enter the ' + prompt_action + ':');
-	        insertTextAtCursor(textarea, '[' + tag + ']' + text_to_insert + '[' + tag + ']');
+
+	        if (!text_to_insert) {
+	        	return; //user pressed the cancel button
+	        } else {
+	        	insertTextAtCursor(textarea, '[' + tag + ']' + text_to_insert + '[' + tag + ']');
+	        }
 
     	}, false);
+    }
+
+    //function that makes the user confirm they want to do something
+    function are_you_sure(e) {
+        if (!confirm('Are you sure you want to do that?')) e.preventDefault();
+    };
+
+    //are you sure? click handler
+	for(var i = 0, elems = document.querySelectorAll('.needs-confirmation'); i < elems.length; i++){
+    	elems[i].addEventListener('click', are_you_sure, false);
     }
 
 }, false);

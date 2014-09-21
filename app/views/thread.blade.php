@@ -19,7 +19,7 @@
 					<a class="btn btn-xs btn-default{{ (Sentry::check() && Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30 ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/down"><i class="fa fa-angle-down"></i> Vote Down</a>
 				@endif
 				@if(Sentry::check() && Sentry::getUser()->id == $thread->user_id)
-					<a href="/delete/thread/{{ $thread->id }}" class="btn btn-xs btn-default"><i class="fa fa-trash"></i> Delete</a>
+					<a href="/delete/thread/{{ $thread->id }}" class="btn btn-xs btn-default needs-confirmation"><i class="fa fa-trash"></i> Delete</a>
 				@endif
 			</div>
 			<p class="post-body">{{ $thread->body }}</p>
@@ -31,10 +31,15 @@
 						<p class="comment-body">{{ $comment->body }}</p>
 						<p class="comment-time">
 							{{{ $comment->created_at->diffForHumans() }}} {{ ($comment->user_id == $thread->user_id ? 'by OP' : '') }}
-							@if(Sentry::check() && Sentry::getUser()->id == $comment->user_id)
-								<a href="/delete/comment/{{ $comment->id }}" class="text-muted delete-comment-button"><i class="fa fa-trash"></i></a>
-							@endif
 						</p>
+						<div class="comment-actions">
+							@if (Sentry::check())
+								<span class="quote-this-comment" data-comment-id="{{ $comment->id }}"><i class="fa fa-quote-right"></i></span>
+							@endif
+							@if(Sentry::check() && Sentry::getUser()->id == $comment->user_id)
+								<a href="/delete/comment/{{ $comment->id }}" class="delete-comment-button needs-confirmation"><i class="fa fa-trash"></i></a>
+							@endif
+						</div>
 					</div>
 					<div class="separator"></div>
 				@endforeach
