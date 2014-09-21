@@ -22,7 +22,7 @@
 	</div>
 	<div class="col-xs-12">
 		<div id="pagination">
-
+			{{ $threads->links() }}
 		</div>
 	</div>
 @stop

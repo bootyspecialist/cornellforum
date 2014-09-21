@@ -16,9 +16,6 @@ Route::get('/', array(
 	'as' => 'home',
 	'uses' => 'HomeController@homePage'
 ));
-Route::get('page/{page_number}', function() {
-	return View::make('home');
-})->where('page_number', '[1-9]+');
 
 //threads
 Route::get('thread/new', function() { return View::make('newthread'); });

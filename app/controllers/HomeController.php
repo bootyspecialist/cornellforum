@@ -3,7 +3,7 @@
 class HomeController extends BaseController {
 
 	public function homePage() {
-		$threads = Thread::orderBy('updated_at', 'desc')->take(25)->get();
+		$threads = Thread::orderBy('updated_at', 'desc')->paginate(5);
 		return View::make('home', array('threads' => $threads));
 	}
 
