@@ -201,15 +201,6 @@ div.comment-actions {
 	font-size: 13px;
 }
 
-div.thread-secondary-actions {
-	color: #777;
-	margin: 0 0 15px 0;
-}
-
-span.quote-this-thread {
-	color: #999 !important;
-}
-
 div.comment-actions > .comment-action {
 	color: #bbb !important;
 	cursor: pointer;
