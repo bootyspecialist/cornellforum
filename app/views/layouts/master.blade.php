@@ -48,6 +48,7 @@
 				</div>
 			</div>
 		</div>
+		{{ HTML::script('/static/js/libraries.js') }}
 		{{ HTML::script('/static/js/cornellforum.js') }}
 	</body>
 </html>
