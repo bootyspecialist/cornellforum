@@ -264,14 +264,10 @@ div.form-group.errors {
 
 span.new-thread-notification, span.new-comment-notification {
 	display: inline-block;
+	position: relative;
+	top: -1.5px;
 	font-size: 13px;
 	margin: 0 0 0 5px;
-	padding: 5px;
-	border-radius: 5px;
-}
-
-span.new-comment-notification {
-	background: rgba(0, 0, 0, 0.05);
 }
 
 /* sticky footer */
