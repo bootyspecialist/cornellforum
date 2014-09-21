@@ -15,7 +15,7 @@
 			<div class="navbar navbar-inverse navbar-static-top" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="/"><i class="fa fa-comments cornellforum-logo"></i> Cornell Forum</a>
+						<a class="navbar-brand" href="/"><img id="shh" src="/static/img/shh.png" height="55"/> Cornell Forum</a>
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
