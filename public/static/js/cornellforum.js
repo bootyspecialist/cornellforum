@@ -17,6 +17,17 @@ document.addEventListener('DOMContentLoaded', function() {
 	    }
 	}
 
+	//finds y value of given element
+	function findPos(elem) {
+	    var curtop = 0;
+	    if (elem.offsetParent) {
+	        do {
+	            curtop += elem.offsetTop;
+	        } while (elem = elem.offsetParent);
+	    return [curtop];
+	    }
+	}
+
 	//formatting buttons click handler
 	for(var i = 0, formattingbuttons = document.querySelectorAll('div.formatting-buttons ul > li.formatting-button'); i < formattingbuttons.length; i++){
     	formattingbuttons[i].addEventListener('click', function() {
@@ -72,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	    	reqwest('/quote/thread/' + this.getAttribute('data-thread-id'), function(resp) {
 	    		var quote = resp.quote.replace(/(\r\n|\n|\r)/gm,'');
 	    		insertTextAtCursor(textarea, quote);
+	    		window.scroll(0, findPos(textarea));
 			})
     	}, false);
     }
@@ -81,9 +93,9 @@ document.addEventListener('DOMContentLoaded', function() {
     	elems[i].addEventListener('click', function() {
 	    	var textarea = document.querySelector('textarea.with-formatting-buttons');
 	    	reqwest('/quote/comment/' + this.getAttribute('data-comment-id'), function(resp) {
-	    		console.log(resp);
 	    		var quote = resp.quote.replace(/(\r\n|\n|\r)/gm,'');
 	    		insertTextAtCursor(textarea, quote);
+	    		window.scroll(0, findPos(textarea));
 			})
     	}, false);
     }
