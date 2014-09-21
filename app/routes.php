@@ -28,7 +28,7 @@ Route::get('delete/thread/{thread_id}', array(
 	'as' => 'delete_thread',
 	'uses' => 'ThreadController@deleteThread'
 ))->where('thread_id', '[0-9]+');
-Route::get('quote/thread/{thread_id', array(
+Route::get('quote/thread/{thread_id}', array(
 	'as' => 'quote_thread',
 	'uses' => 'ThreadController@quoteThread'
 ))->where('thread_id', '[0-9]+');
@@ -39,7 +39,7 @@ Route::get('delete/comment/{comment_id}', array(
 	'as' => 'delete_comment',
 	'uses' => 'CommentController@deleteComment'
 ))->where('comment_id', '[0-9]+');
-Route::get('quote/comment/{comment_id', array(
+Route::get('quote/comment/{comment_id}', array(
 	'as' => 'quote_comment',
 	'uses' => 'CommentController@quoteComment'
 ))->where('comment_id', '[0-9]+');
