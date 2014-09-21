@@ -34,7 +34,7 @@ class CommentController extends BaseController {
 			return Redirect::to('/');
 		}
 
-		return '[quote]' . $comment->body_raw . '[/quote]';
+		return Response::json(array('quote' => '[quote]' . $comment->body_raw . '[/quote]'));
 	}
 
 	public function deleteComment($comment_id) {
