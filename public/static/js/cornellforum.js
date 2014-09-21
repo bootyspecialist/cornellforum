@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	            	prompt_action = 'text you want to italicize';
 	                break;
 	            case 'image':
+	            	tag = 'img';
 	                prompt_action = 'source of the image file you want to embed';
 	                break;
 	            case 'youtube':
