@@ -205,6 +205,10 @@ div.comment-actions a:hover, div.comment-actions span:hover {
 	margin: 0;
 }
 
+#new-comment-form div.no-bump {
+	margin: 0 0 0 10px;
+}
+
 div.outer-textarea-container {
 	position: relative;
 }
