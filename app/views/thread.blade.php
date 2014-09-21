@@ -10,17 +10,13 @@
 			<div class="thread-actions">
 				@if(Sentry::check() && Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', 1)->exists())
 					<a class="btn btn-xs btn-info" href="#"><i class="fa fa-check-circle"></i> Voted Up</a>
-				@else
-					<a class="btn btn-xs btn-default{{ (Sentry::check() ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/up"><i class="fa fa-angle-up"></i> Vote Up</a>
 				@endif
 				@if(Sentry::check() && Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', -1)->exists())
 					<a class="btn btn-xs btn-danger" href="#"><i class="fa fa-times-circle"></i> Voted Down</a>
-				@else
-					<a class="btn btn-xs btn-default{{ (Sentry::check() && Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30 ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/down"><i class="fa fa-angle-down"></i> Vote Down</a>
+				@elseif(Sentry::check())
+					<a class="btn btn-xs btn-default{{ (Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30 ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/down"><i class="fa fa-angle-down"></i> Vote Down</a>
 				@endif
-				@if (Sentry::check())
-					<span class="quote-this-thread btn btn-xs btn-default" data-thread-id="{{ $thread->id }}"><i class="fa fa-quote-left"></i> Quote</span>
-				@endif
+				<span class="quote-this-thread btn btn-xs btn-default" data-thread-id="{{ $thread->id }}"><i class="fa fa-quote-left"></i> Quote</span>
 				@if(Sentry::check() && Sentry::getUser()->id == $thread->user_id)
 					<a href="/delete/thread/{{ $thread->id }}" class="btn btn-xs btn-default needs-confirmation"><i class="fa fa-trash"></i> Delete</a>
 				@endif
