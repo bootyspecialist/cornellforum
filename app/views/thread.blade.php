@@ -23,6 +23,11 @@
 				@endif
 			</div>
 			<p class="post-body">{{ $thread->body }}</p>
+			<div class="thread-secondary-actions">
+				@if (Sentry::check())
+					<span class="quote-this-thread btn btn-xs btn-default" data-thread-id="{{ $thread->id }}"><i class="fa fa-quote-left"></i> Quote Thread</span>
+				@endif
+			</div>
 		</div>
 		@if (count($comments) > 0)
 			<div id="comments">
@@ -34,10 +39,10 @@
 						</p>
 						<div class="comment-actions">
 							@if (Sentry::check())
-								<span class="quote-this-comment" data-comment-id="{{ $comment->id }}"><i class="fa fa-quote-right"></i></span>
+								<span class="quote-this-comment comment-action" data-comment-id="{{ $comment->id }}"><i class="fa fa-quote-left"></i></span>
 							@endif
 							@if(Sentry::check() && Sentry::getUser()->id == $comment->user_id)
-								<a href="/delete/comment/{{ $comment->id }}" class="delete-comment-button needs-confirmation"><i class="fa fa-trash"></i></a>
+								<a href="/delete/comment/{{ $comment->id }}" class="delete-comment-button comment-action needs-confirmation"><i class="fa fa-trash"></i></a>
 							@endif
 						</div>
 					</div>
