@@ -25,13 +25,13 @@
 					<a href="/delete/thread/{{ $thread->id }}" class="btn btn-xs btn-default needs-confirmation"><i class="fa fa-trash"></i> Delete</a>
 				@endif
 			</div>
-			<p class="post-body">{{ $thread->body }}</p>
+			<div class="post-body">{{ $thread->body }}</div>
 		</div>
 		@if (count($comments) > 0)
 			<div id="comments">
 				@foreach($comments as $comment)
 					<div class="comment{{ ($comment->user_id == $thread->user_id ? ' comment-op' : '') }}" id="comment-{{{ $comment->id }}}">
-						<p class="comment-body">{{ $comment->body }}</p>
+						<div class="post-body">{{ $comment->body }}</div>
 						<p class="comment-time">
 							{{{ $comment->created_at->diffForHumans() }}} {{ ($comment->user_id == $thread->user_id ? 'by OP' : '') }}
 						</p>

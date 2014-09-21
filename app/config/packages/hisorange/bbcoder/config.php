@@ -14,9 +14,9 @@ return array(
 				'disabled' => false,
 				'shorthandLinks' => false,
 				'xhtmlOutput' => false,
-				'escapeHtml' => true,
+				'escapeHtml' => false,
 				'strictMode' => true,
-				'maxNewlines' => 3,
+				'maxNewlines' => 2,
 				'lineBreaks' => true,
 				'removeEmpty' => false
 			),

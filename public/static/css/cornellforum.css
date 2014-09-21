@@ -132,14 +132,22 @@ div.thread-actions {
 
 }
 
-p.post-body {
+div.post-body {
 	margin: 15px 0;
 }
 
-p.post-body img {
+div.post-body img {
 	max-width: 600px;
 	max-height: 600px;
 	border-radius: 5px;
+}
+
+div.post-body blockquote {
+	font-size: 14px;
+	margin: 0;
+	padding: 5px 10px;
+	background: rgba(255, 255, 255, 0.8);
+	border-left: 5px solid #357ebd;
 }
 
 div.comment {

@@ -81,8 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
     	elems[i].addEventListener('click', function() {
 	    	var textarea = document.querySelector('textarea.with-formatting-buttons');
 	    	reqwest('/quote/thread/' + this.getAttribute('data-thread-id'), function(resp) {
-	    		var quote = resp.quote.replace(/(\r\n|\n|\r)/gm,'');
-	    		insertTextAtCursor(textarea, quote);
+	    		insertTextAtCursor(textarea, resp.quote);
 	    		window.scroll(0, findPos(textarea));
 			})
     	}, false);
@@ -93,8 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
     	elems[i].addEventListener('click', function() {
 	    	var textarea = document.querySelector('textarea.with-formatting-buttons');
 	    	reqwest('/quote/comment/' + this.getAttribute('data-comment-id'), function(resp) {
-	    		var quote = resp.quote.replace(/(\r\n|\n|\r)/gm,'');
-	    		insertTextAtCursor(textarea, quote);
+	    		insertTextAtCursor(textarea, resp.quote);
 	    		window.scroll(0, findPos(textarea));
 			})
     	}, false);

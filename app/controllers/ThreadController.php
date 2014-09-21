@@ -68,7 +68,10 @@ class ThreadController extends BaseController {
 			return Redirect::to('/');
 		}
 
-		return Response::json(array('quote' => '[quote]' . $thread->body_raw . '[/quote]'));
+		$quote = trim(preg_replace('/\s+/', ' ', $thread->body_raw));
+		$quote = preg_replace('/\[quote\](.*?)\[\/quote\]/is', '', $quote);
+		$quote = preg_replace('/\[img\](.*?)\[\/img\]/is', "(image)\r\n", $quote);
+		return Response::json(array('quote' => '[quote]' . $quote . "[/quote]\r\n"));
 	}
 
 	public function deleteThread($thread_id) {

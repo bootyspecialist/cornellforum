@@ -34,7 +34,10 @@ class CommentController extends BaseController {
 			return Redirect::to('/');
 		}
 
-		return Response::json(array('quote' => '[quote]' . $comment->body_raw . '[/quote]'));
+		$quote = trim(preg_replace('/\s+/', ' ', $comment->body_raw));
+		$quote = preg_replace('/\[quote\](.*?)\[\/quote\]/is', '', $quote);
+		$quote = preg_replace('/\[img\](.*?)\[\/img\]/is', "(image)\r\n", $quote);
+		return Response::json(array('quote' => '[quote]' . $quote . "[/quote]\r\n"));
 	}
 
 	public function deleteComment($comment_id) {
