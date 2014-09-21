@@ -67,7 +67,7 @@ li.logged-in a i {
 }
 
 div.thread-preview {
-	margin: 0 0 10px 0;
+	margin: 0 0 5px 0;
 	padding: 0;
 }
 
@@ -267,6 +267,7 @@ span.new-thread-notification, span.new-comment-notification {
 	position: relative;
 	top: -1.5px;
 	font-size: 13px;
+	font-weight: bold;
 	margin: 0 0 0 5px;
 }
 
