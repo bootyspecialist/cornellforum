@@ -11,7 +11,7 @@
 |
 */
 
-//homepage and subsequent pages
+//homepage
 Route::get('/', array(
 	'as' => 'home',
 	'uses' => 'HomeController@homePage'
