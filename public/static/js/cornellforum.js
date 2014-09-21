@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	//formatting buttons click handler
-	for(var i = 0, formattingbuttons = document.querySelectorAll('div.formatting-buttons ul > li.formatting-button'); i < formattingbuttons.length; i++){
+	for(var i = 0, formattingbuttons = document.querySelectorAll('form div.formatting-buttons ul > li.formatting-button'); i < formattingbuttons.length; i++){
     	formattingbuttons[i].addEventListener('click', function() {
     		var action = this.getAttribute('data-action');
     		var textarea = document.querySelector('textarea.with-formatting-buttons');
