@@ -262,6 +262,18 @@ div.form-group.errors {
 	color: #b31b1b;
 }
 
+span.new-thread-notification, span.new-comment-notification {
+	display: inline-block;
+	font-size: 13px;
+	margin: 0 0 0 5px;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+span.new-comment-notification {
+	background: rgba(0, 0, 0, 0.05);
+}
+
 /* sticky footer */
 html,
 body {
