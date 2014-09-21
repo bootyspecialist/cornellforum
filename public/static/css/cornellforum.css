@@ -130,7 +130,14 @@ h4.thread-subtitle {
 
 div.thread-actions {
 	margin: 0 0 15px 0;
+}
 
+div.thread-actions .btn {
+	margin-right: 5px;
+}
+
+div.thread-actions .btn-default {
+	color: #666;
 }
 
 div.post-body {
@@ -184,7 +191,7 @@ div.comment-actions {
 div.comment-actions > .comment-action {
 	color: #bbb !important;
 	cursor: pointer;
-	margin: 0 0 0 10px;
+	margin: 0 0 0 15px;
 }
 
 div.comment-actions a:hover, div.comment-actions span:hover {
