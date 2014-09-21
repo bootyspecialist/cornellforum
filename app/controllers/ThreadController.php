@@ -28,6 +28,10 @@ class ThreadController extends BaseController {
 		return View::make('thread', array('thread' => $thread, 'comments' => $comments));
 	}
 
+	public function newThreadForm() {
+		return View::make('newthread');
+	}
+
 	public function newThread() {
 		$input = Input::only('title', 'body');
 		$user = Sentry::getUser(); //logged in user
