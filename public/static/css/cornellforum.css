@@ -93,7 +93,7 @@ p.thread-index-subtitle {
 
 div#thread-intro {
 	padding: 0;
-	margin: 0 0 20px 0;
+	margin: 0 0 5px 0;
 	border-bottom: 1px dotted #ccc;
 
 }
@@ -161,7 +161,7 @@ div.comment {
 	display: inline-block;
 	position:relative;
 	padding: 10px 0;
-	margin: 0 0 10px 0;
+	margin: 0;
 	word-wrap: break-word;
 }
 
