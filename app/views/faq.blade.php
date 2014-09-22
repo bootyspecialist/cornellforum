@@ -16,14 +16,8 @@
 		</ul>
 		<p>You use a BBCode tag by wrapping the content you want the tag to apply to inside the tag, just like HTML (if you know HTML). A sample post using BBCode can be written using syntax like this:</p>
 		<pre>[b]some bolded text[/b] and then a [youtube]jD9SwJTg-5U[/youtube] video, and then an [img]http://upload.wikimedia.org/wikipedia/commons/d/d9/Black_BMW_M3_CSL_E46_rr.jpg[/img] pic of a BMW m3</pre>
-		<h3>Wordfilters, a.k.a. poppycocking slot machines what is this chitty chitty bang bang:</h3>
-		<p>You've probably noticed that Cornell Forum has wordfilters. If you write certain words, Cornell Forum will convert them to something else before saving your post. This makes things a bit silly, perpetuates inside jokes and reminds you not to take yourself too seriously. Wordfilters have been around on iterations of Cornell Forum since 2007. They also (sortof) eliminates unsavory words. The list of wordfilters is as follows:</p>
-		<ul>
-			<li>fugg <i class="fa fa-long-arrow-right"></i> <code>poppycock</code></li>
-			<li>shet <i class="fa fa-long-arrow-right"></i> <code>chitty chitty bang bang</code></li>
-			<li>sl00t <i class="fa fa-long-arrow-right"></i> <code>slot machine</code></li>
-			<li>bundle of sticks|stick <i class="fa fa-long-arrow-right"></i> <code>fratstar</code></li>
-		</ul>
+		<h3>Watch your language!</h3>
+		<p>You've probably noticed that Cornell Forum has wordfilters. If you write certain words, Cornell Forum will convert them to a series of asterisks like <code>****</code> before saving your post. Would you want your grandmother reading what you wrote?</p>
 		<h3>Commitment to privacy and anonymity:</h3>
 		<p>Cornell Forum is an <strong>anonymous forum</strong> and will always be that way. Our privacy and anonymity commitments:</p>
 		<ul class="fa-ul">
