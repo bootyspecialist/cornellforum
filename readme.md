@@ -2,7 +2,7 @@
 
 cornellforum is a forum for the Cornell University community. If you are a Cornellian and would like to contribute please submit a pull request or email me at will.najar@outlook.com. cornellforum is in no way endorsed by Cornell University.
 
-## Design goals: ##
+### Design goals: ###
 cornellforum has a few loose design goals:
  - Use Laravel/PHP due to ubiquity of platform and because Django sucks
  - Freedom for Cornellians to say whatever is on their minds
@@ -14,7 +14,7 @@ cornellforum has a few loose design goals:
  - Open source and community-maintained
  - Never show ads, ever
 
-## Technology: ##
+### Technology: ###
 cornellforum uses the following frameworks/packages:
  - Laravel 4.2.x and PHP 5.4+
  - hisorange/bbcoder
