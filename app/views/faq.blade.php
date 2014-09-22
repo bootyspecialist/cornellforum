@@ -22,7 +22,7 @@
 		<p>Cornell Forum is an <strong>anonymous forum</strong> and will always be that way. Our privacy and anonymity commitments:</p>
 		<ul class="fa-ul">
 		 	<li><i class="fa-li fa fa-times-circle"></i> We will never show your login information next to any posts or comments you make. Nobody will be able to find out if you made a post</li>
-		 	<li><i class="fa-li fa fa-times-circle"></i> We will never record your IP address or track what you're doing with crap like Google Analytics</li>
+		 	<li><i class="fa-li fa fa-times-circle"></i> We will never record your IP address or track what you're doing with intrusive services like Google Analytics</li>
 		 	<li><i class="fa-li fa fa-times-circle"></i> We will never censor what you have to say as long as it fits within our <a href="#simple-rules">simple rules</a></li>
 		 </ul>
 		 <p>tl;dr we take your privacy and anonymity very seriously.</p>
