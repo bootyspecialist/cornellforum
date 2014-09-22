@@ -23,7 +23,7 @@ return array(
 
 			// Hooks being loaded as default.
 			'hooks'		=> array(
-				'Decoda\Hook\CensorHook' => array(),
+				/* 'Decoda\Hook\CensorHook' => array(), we have a custom version already*/
 				'Decoda\Hook\ClickableHook' => array(),
 				'Decoda\Hook\CodeHook' => array(),
 				'Decoda\Hook\EmoticonHook' => array('path' => '/static/img/emoticons/', 'extension' => 'png'),
