@@ -16,6 +16,14 @@
             <div class="form-group {{ ($errors->has('password')) ? 'has-error' : '' }}">
                 {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password'))}}
             </div>
+            <div class="form-group hide">
+                <div class="checkbox">
+                    <label>
+                        <input name="rememberMe" type="checkbox" value="rememberMe" checked>
+                        Remember me?
+                    </label>
+                </div>
+            </div>
             <div class="form-group errors">
                 {{ ($errors->has('email') ? $errors->first('email') : '') }}
                 {{ ($errors->has('password') ?  $errors->first('password') : '') }}
