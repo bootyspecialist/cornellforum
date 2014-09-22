@@ -8,7 +8,7 @@
 		<form role="form" action="/search" method="get">
 			<div class="form-group">
 				<label for="search-term" class="sr-only">Search term:</label>
-	    		<input type="text" class="form-control input-lg" id="search-term" placeholder="jeff seid flexing shirtless tight briefs no homo">
+	    		<input type="text" class="form-control input-lg" id="search-term" placeholder="Enter your search query here...">
 			</div>
 		</form>
 		<div id="search-results">
