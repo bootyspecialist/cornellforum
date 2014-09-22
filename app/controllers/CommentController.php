@@ -25,7 +25,6 @@ class CommentController extends BaseController {
 				'thread_id' => $thread->id
 				//timestamps are automatically set to now()
 			));
-			Sloots::when_will_they_learn($thread, $new_comment);
 			return Redirect::to('thread/' . $thread->id . '/' . $thread->slug . '#comment-' . $new_comment->id); //don't use Redirect::back()
 		} else {
 			return Redirect::to('thread/' . $thread->id . '/' . $thread->slug . '#new-comment-form')->withInput()->withErrors($validator);
