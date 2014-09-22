@@ -1,6 +1,5 @@
 ![](http://i.imgur.com/au1yJWU.png)
 
-# cornellforum #
 cornellforum is a forum for the Cornell University community. If you are a Cornellian and would like to contribute please submit a pull request or email me at will.najar@outlook.com. cornellforum is in no way endorsed by Cornell University.
 
 ## Design goals: ##
