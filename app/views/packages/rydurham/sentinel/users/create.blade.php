@@ -28,7 +28,7 @@
             <div class="form-group">
                 <p><strong>Note:</strong> you won't be able to log in until you verify your email!</p>
             </div>
-            {{ Form::submit('Send verification email', array('class' => 'btn btn-primary')) }}
+            {{ Form::submit('Create account and send verification email', array('class' => 'btn btn-primary')) }}
         {{ Form::close() }}
     </div>
 @stop
