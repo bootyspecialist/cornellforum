@@ -177,9 +177,9 @@ div.comment {
 
 div.comment-user-frame {
 	float: left;
-	padding: 8px 12px;
+	padding: 10px 15px;
 	border-radius: 5px;
-	background: rgba(0, 0, 0, 0.08);
+	background: rgba(0, 0, 0, 0.06);
 }
 
 i.anonymous-user-icon {
@@ -188,7 +188,7 @@ i.anonymous-user-icon {
 }
 
 div.comment-content {
-	margin: 0 0 0 60px;
+	margin: 0 0 0 65px;
 }
 
 p.comment-time {
