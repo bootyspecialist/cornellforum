@@ -59,6 +59,16 @@ Route::get('quote/comment/{comment_id}', array(
 	'before' => 'Sentinel\auth',
 	'uses' => 'CommentController@quoteComment'
 ))->where('comment_id', '[0-9]+');
+Route::get('edit/comment/{comment_id}', array(
+	'as' => 'retrieve_raw_comment_body',
+	'before' => 'Sentinel\auth',
+	'uses' => 'CommentController@retrieveRawBody'
+))->where('comment_id', '[0-9]+');
+Route::post('edit/comment/{comment_id}', array(
+	'as' => 'retrieve_raw_comment_body',
+	'before' => 'Sentinel\auth',
+	'uses' => 'CommentController@editComment'
+))->where('comment_id', '[0-9]+');
 
 //voting
 Route::get('vote/{thread_id}/up', array(
