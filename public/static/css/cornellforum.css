@@ -149,7 +149,7 @@ div.post-body {
 }
 
 div.comment div.post-body {
-	margin: 5px 0 10px 0;
+	margin: 0 0 10px 0;
 }
 
 div.post-body img {
@@ -171,13 +171,24 @@ div.post-body blockquote {
 div.comment {
 	display: inline-block;
 	position:relative;
-	padding: 10px 0;
-	margin: 0;
+	margin: 0 0 25px 0;
 	word-wrap: break-word;
 }
 
-div.comment:first-child {
-	padding: 0 0 10px 0;
+div.comment-user-frame {
+	float: left;
+	padding: 8px 12px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.08);
+}
+
+i.anonymous-user-icon {
+	color: rgba(0, 0, 0, 0.4);
+	font-size: 16px;
+}
+
+div.comment-content {
+	margin: 0 0 0 60px;
 }
 
 p.comment-time {
