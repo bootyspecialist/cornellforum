@@ -174,8 +174,7 @@ div.post-body blockquote {
 div.comment {
 	display: inline-block;
 	position:relative;
-	padding: 10px 0;
-	margin: 10px 0;
+	margin: 20px 0;
 	word-wrap: break-word;
 }
 
@@ -187,7 +186,13 @@ div.comment-user-frame {
 	float: left;
 	padding: 10px 15px;
 	border-radius: 5px;
-	background: rgba(0, 0, 0, 0.06);
+	background: rgba(0, 0, 0, 0.05);
+}
+
+div.comment-op div.comment-user-frame {
+	padding: 12px 13px;
+	color: #777;
+	font-size: 13px;
 }
 
 i.anonymous-user-icon {

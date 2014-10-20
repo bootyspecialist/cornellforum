@@ -32,7 +32,11 @@
 				@foreach($comments as $comment)
 					<div class="comment{{ ($comment->user_id == $thread->user_id ? ' comment-op' : '') }}" id="comment-{{{ $comment->id }}}">
 						<div class="comment-user-frame">
-							<i class="fa fa-user anonymous-user-icon"></i>
+							@if ($comment->user_id == $thread->user_id)
+								OP
+							@else
+								<i class="fa fa-user anonymous-user-icon"></i>
+							@endif
 						</div>
 						<div class="comment-content">
 							<div class="comment-main">
