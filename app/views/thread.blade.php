@@ -30,9 +30,11 @@
 		@if (count($comments) > 0)
 			<div id="comments">
 				@foreach($comments as $comment)
-					<div class="comment{{ ($comment->user_id == $thread->user_id ? ' comment-op' : '') }}" id="comment-{{{ $comment->id }}}">
+					<div class="comment{{ ($comment->user_id == $thread->user_id ? ' comment-op ' : ' ') }}{{ (Sentry::check() && $comment->user_id == Sentry::getUser()->id ? 'comment-me ' : '') }}" id="comment-{{{ $comment->id }}}">
 						<div class="comment-user-frame">
-							@if ($comment->user_id == $thread->user_id)
+							@if (Sentry::check() && $comment->user_id == Sentry::getUser()->id)
+								Me
+							@elseif ($comment->user_id == $thread->user_id)
 								OP
 							@else
 								<i class="fa fa-user anonymous-user-icon"></i>

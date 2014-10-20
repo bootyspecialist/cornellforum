@@ -189,10 +189,14 @@ div.comment-user-frame {
 	background: rgba(0, 0, 0, 0.05);
 }
 
-div.comment-op div.comment-user-frame {
-	padding: 12px 13px;
+div.comment-op div.comment-user-frame, div.comment-me div.comment-user-frame {
+	padding: 12px;
 	color: #666;
 	font-size: 13px;
+}
+
+div.comment-me div.comment-user-frame {
+	background: rgba(0, 0, 0, 0.12);
 }
 
 i.anonymous-user-icon {
