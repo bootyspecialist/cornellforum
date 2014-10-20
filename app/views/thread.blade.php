@@ -54,6 +54,8 @@
 					<div class="separator"></div>
 				@endforeach
 			</div>
+		@else
+			<div class="no-comments-padder"></div>
 		@endif
 		<div id="reply-area">
 			<h5 class="new-comment-header">Comment on this thread:</h5>

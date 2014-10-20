@@ -97,15 +97,18 @@ p.thread-index-subtitle {
 
 div#thread-intro {
 	padding: 0;
-	margin: 0 0 15px 0;
+	margin: 0;
 	border-bottom: 1px dotted #ccc;
 
 }
 
 div#comments {
-	margin: 0 0 25px 0;
+	margin: 0 0 15px 0;
 	padding: 0 0 5px 0;
-	border-bottom: 1px dotted #ccc;
+}
+
+div.no-comments-padder {
+	margin-bottom: 15px;
 }
 
 h5.new-comment-header {
@@ -172,7 +175,12 @@ div.comment {
 	display: inline-block;
 	position:relative;
 	padding: 10px 0;
+	margin: 10px 0;
 	word-wrap: break-word;
+}
+
+div.separator {
+	border-bottom: 1px dotted #ccc;
 }
 
 div.comment-user-frame {
