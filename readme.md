@@ -25,4 +25,5 @@ cornellforum uses the following frameworks/packages:
  - Bootstrap 3
  - FontAwesome
  - Google Web Fonts
- - ~~jQuery~~
+ - jQuery
+ - bootbox.js
