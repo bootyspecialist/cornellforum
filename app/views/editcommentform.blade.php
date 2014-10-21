@@ -30,7 +30,7 @@
 		</div>
 		<div class="form-group">
 			{{ Form::submit('Post edited comment', array('class' => 'btn btn-primary')) }}
-			<span class="btn btn-default">Leave as is</span>
+			<span class="btn btn-default">Don't save and go back</span>
 		</div>
 	{{ Form::close() }}
 </div>

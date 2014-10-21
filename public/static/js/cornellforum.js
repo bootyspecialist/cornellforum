@@ -110,9 +110,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	    		//remove the children
 		    	while (comment_children[0]) {
 				    comment_children[0].parentNode.removeChild(comment_children[0]);
+				    // comment_children[0].style.display = "none";
 				}
 				//replace with form
-	    		comment.innerHTML = resp;
+	    		comment.innerHTML = comment.innerHTML + resp;
 			})
     	}, false);
     }
