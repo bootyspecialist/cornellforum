@@ -39,6 +39,14 @@ class CommentController extends BaseController {
 		return Response::json(array('body' => $comment->body_raw));
 	}
 
+	public function editCommentForm($comment_id) {
+		if (!$comment = Comment::find($comment_id)) {
+			//comment doesn't exist
+			return;
+		}
+		return Response::json(array('form' => '' . $comment->body_raw . ''));
+	}
+
 	public function editComment($comment_id) {
 		$input = Input::only('body');
 		$user = Sentry::getUser();

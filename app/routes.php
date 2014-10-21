@@ -60,9 +60,9 @@ Route::get('quote/comment/{comment_id}', array(
 	'uses' => 'CommentController@quoteComment'
 ))->where('comment_id', '[0-9]+');
 Route::get('edit/comment/{comment_id}', array(
-	'as' => 'retrieve_raw_comment_body',
+	'as' => 'edit_comment_form',
 	'before' => 'Sentinel\auth',
-	'uses' => 'CommentController@retrieveRawBody'
+	'uses' => 'CommentController@editCommentForm'
 ))->where('comment_id', '[0-9]+');
 Route::post('edit/comment/{comment_id}', array(
 	'as' => 'retrieve_raw_comment_body',

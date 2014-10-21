@@ -99,4 +99,22 @@ document.addEventListener('DOMContentLoaded', function() {
     	}, false);
     }
 
+    //click handler to edit comments
+	for(var i = 0, elems = document.querySelectorAll('.edit-this-comment'); i < elems.length; i++){
+    	elems[i].addEventListener('click', function() {
+	    	var comment_id = this.getAttribute('data-comment-id');
+	    	var comment = document.querySelectorAll('#comment-' + comment_id)[0];
+	    	var comment_children = comment.childNodes;
+	    	//remove the children
+	    	while (comment_children[0]) {
+			    comment_children[0].parentNode.removeChild(comment_children[0]);
+			}
+			//replace with editing dialogue
+	    	reqwest('/edit/comment/' + comment_id, function(resp) {
+	    		console.log(resp);
+	    		comment.innerHTML = resp.body;
+			})
+    	}, false);
+    }
+
 }, false);

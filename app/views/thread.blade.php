@@ -48,10 +48,11 @@
 								<p class="comment-time">{{{ $comment->created_at->diffForHumans() }}}</p>
 								<div class="comment-actions">
 									@if (Sentry::check())
-										<span class="quote-this-comment comment-action" data-comment-id="{{ $comment->id }}"><i class="fa fa-quote-left"></i></span>
+										<span class="quote-this-comment comment-action" data-comment-id="{{ $comment->id }}" title="Quote this comment"><i class="fa fa-quote-left"></i></span>
 									@endif
 									@if(Sentry::check() && Sentry::getUser()->id == $comment->user_id)
-										<a href="/delete/comment/{{ $comment->id }}" class="delete-comment-button comment-action needs-confirmation"><i class="fa fa-trash"></i></a>
+										<span class="edit-this-comment comment-action" data-comment-id="{{ $comment->id }}" title="Edit this comment"><i class="fa fa-edit"></i></span>
+										<a href="/delete/comment/{{ $comment->id }}" class="delete-this-comment comment-action needs-confirmation" data-comment-id="{{ $comment->id }}" title="Delete this comment"><i class="fa fa-trash"></i></a>
 									@endif
 								</div>
 							</div>
