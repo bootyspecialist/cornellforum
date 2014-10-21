@@ -8,7 +8,7 @@
 		</div>
 		<div class="form-group">
 			{{ Form::submit('Post edited comment', array('class' => 'btn btn-warning btn-sm')) }}
-			<span class="btn btn-default btn-sm">Don't save and go back</span>
+			<span class="btn btn-default btn-sm dont-edit-this-comment" data-comment-id="{{ $comment->id }}">Don't edit and go back</span>
 		</div>
 	{{ Form::close() }}
 </div>

@@ -111,4 +111,13 @@ $(function() {
 		});
     });
 
+    //click handler to stop editing a comment
+    $(document).on('click', 'span.dont-edit-this-comment', function() {
+		var comment_id = this.getAttribute('data-comment-id');
+    	var comment = $('#comment-' + comment_id);
+		//remove editing dialogue and bring everything back to normal
+		comment.children('#edit-comment-form').remove();
+		comment.children().show();
+    });
+
 });
