@@ -54,7 +54,7 @@ class CommentController extends BaseController {
 			//comment doesn't exist
 			return Redirect::to('/');
 		}
-		if(!$thread = Thread::find($thread_id)) { //make sure thread exists
+		if(!$thread = $comment->thread) { //make sure thread exists
 			return "You can't comment on a thread that doesn't exist.";
 		}
 		$validator = Validator::make(

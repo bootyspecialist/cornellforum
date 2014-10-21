@@ -194,10 +194,6 @@ div.comment-op div.comment-user-frame, div.comment-me div.comment-user-frame {
 	font-size: 13px;
 }
 
-div.comment-me div.comment-user-frame {
-	background: rgba(0, 0, 0, 0.12);
-}
-
 i.anonymous-user-icon {
 	color: rgba(0, 0, 0, 0.4);
 	font-size: 16px;
