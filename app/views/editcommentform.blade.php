@@ -29,7 +29,7 @@
 			</div>
 		</div>
 		<div class="form-group">
-			{{ Form::submit('Post edited comment', array('class' => 'btn btn-primary'))}}
+			{{ Form::submit('Post edited comment', array('class' => 'btn btn-primary')) }}
 		</div>
 	{{ Form::close() }}
 </div>

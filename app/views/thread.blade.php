@@ -101,7 +101,7 @@
 							{{ ($errors->has('body') ?  $errors->first('body') : '') }}
 						</div>
 						<div class="form-group">
-							{{ Form::submit('Post comment', array('class' => 'btn btn-primary'))}}
+							{{ Form::submit('Post comment', array('class' => 'btn btn-primary')) }}
 							<div class="checkbox checkbox-inline btn btn-sm btn-default no-bump">
 								<label>
 							    	{{ Form::checkbox('no_bump', 'yes') }}
