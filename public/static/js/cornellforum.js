@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+$(function() {
 
 	//inserts text to an element at cursor position
 	function insertTextAtCursor(el, text) {
@@ -29,93 +29,86 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	//formatting buttons click handler
-	for(var i = 0, formattingbuttons = document.querySelectorAll('form div.formatting-buttons ul > li.formatting-button'); i < formattingbuttons.length; i++){
-    	formattingbuttons[i].addEventListener('click', function() {
-    		var action = this.getAttribute('data-action');
-    		var textarea = document.querySelector('textarea.with-formatting-buttons');
-    		var tag, prompt_action;
-    		switch (action) {
-	            case "bold":
-	            	tag = 'b';
-	            	prompt_action = 'text you want to bold';
-	                break;
-	            case "italic":
-	            	tag = 'i';
-	            	prompt_action = 'text you want to italicize';
-	                break;
-	            case 'image':
-	            	tag = 'img';
-	                prompt_action = 'source of the image file you want to embed';
-	                break;
-	            case 'youtube':
-	                tag = 'youtube';
-	            	prompt_action = 'unique video ID (i.e. "fI_xuFA18m4") of the YouTube video you want to embed';
-	                break;
-	            case 'quote':
-	            	tag = 'quote';
-	            	prompt_action = 'text you want to quote';
-	                break;
-	        }
+	$(document).on('click', 'form div.formatting-buttons ul > li.formatting-button', function() {
+		var action = this.getAttribute('data-action');
+		var textarea = $('textarea.with-formatting-buttons');
+		var tag, prompt_action;
+		switch (action) {
+            case "bold":
+            	tag = 'b';
+            	prompt_action = 'text you want to bold';
+                break;
+            case "italic":
+            	tag = 'i';
+            	prompt_action = 'text you want to italicize';
+                break;
+            case 'image':
+            	tag = 'img';
+                prompt_action = 'source of the image file you want to embed';
+                break;
+            case 'youtube':
+                tag = 'youtube';
+            	prompt_action = 'unique video ID (i.e. "fI_xuFA18m4") of the YouTube video you want to embed';
+                break;
+            case 'quote':
+            	tag = 'quote';
+            	prompt_action = 'text you want to quote';
+                break;
+        }
 
-	        var text_to_insert = prompt('Enter the ' + prompt_action + ':');
+        var text_to_insert = prompt('Enter the ' + prompt_action + ':');
 
-	        if (!text_to_insert) {
-	        	return; //user pressed the cancel button
-	        } else {
-	        	insertTextAtCursor(textarea, '[' + tag + ']' + text_to_insert + '[/' + tag + ']');
-	        }
-
-    	}, false);
-    }
+        if (!text_to_insert) {
+        	return; //user pressed the cancel button
+        } else {
+        	insertTextAtCursor(textarea, '[' + tag + ']' + text_to_insert + '[/' + tag + ']');
+        }
+	});
 
     //are you sure? click handler
-	for(var i = 0, elems = document.querySelectorAll('.needs-confirmation'); i < elems.length; i++){
-    	elems[i].addEventListener('click', function() {
-			if (!confirm('Are you sure you want to do that?')) {
-	        	this.preventDefault();
-	        }
-    	}, false);
-    }
+    $(document).on('click', '.needs-confirmation', function() {
+		return window.confirm('Are you sure you want to do this?');
+    });
 
     //click handler to quote threads
-	for(var i = 0, elems = document.querySelectorAll('.quote-this-thread'); i < elems.length; i++){
-    	elems[i].addEventListener('click', function() {
-	    	var textarea = document.querySelector('textarea.with-formatting-buttons');
-	    	reqwest('/quote/thread/' + this.getAttribute('data-thread-id'), function(resp) {
-	    		insertTextAtCursor(textarea, resp.quote);
-	    		window.scroll(0, findPos(textarea));
-			})
-    	}, false);
-    }
+    $(document).on('click', '.quote-this-thread', function() {
+		var textarea = $('textarea.with-formatting-buttons');
+		$.ajax({
+  			type: 'GET',
+  			url: '/quote/thread/' + this.getAttribute('data-thread-id'),
+  			success: function(resp) {
+  				insertTextAtCursor(textarea, resp.quote);
+    			window.scroll(0, findPos(textarea));
+  			}
+		});
+    });
 
     //click handler to quote comments
-	for(var i = 0, elems = document.querySelectorAll('.quote-this-comment'); i < elems.length; i++){
-    	elems[i].addEventListener('click', function() {
-	    	var textarea = document.querySelector('textarea.with-formatting-buttons');
-	    	reqwest('/quote/comment/' + this.getAttribute('data-comment-id'), function(resp) {
-	    		insertTextAtCursor(textarea, resp.quote);
-	    		window.scroll(0, findPos(textarea));
-			})
-    	}, false);
-    }
+    $(document).on('click', '.quote-this-comment', function() {
+		var textarea = $('textarea.with-formatting-buttons');
+		$.ajax({
+  			type: 'GET',
+  			url: '/quote/comment/' + this.getAttribute('data-comment-id'),
+  			success: function(resp) {
+  				insertTextAtCursor(textarea, resp.quote);
+    			window.scroll(0, findPos(textarea));
+  			}
+		});
+    });
 
     //click handler to edit comments
-	for(var i = 0, elems = document.querySelectorAll('.edit-this-comment'); i < elems.length; i++){
-    	elems[i].addEventListener('click', function() {
-	    	var comment_id = this.getAttribute('data-comment-id');
-	    	var comment = document.querySelectorAll('#comment-' + comment_id)[0];
-	    	var comment_children = comment.childNodes;
-			//replace with editing dialogue
-	    	reqwest('/edit/comment/' + comment_id, function(resp) {
-	    		//remove the children
-		    	while (comment_children[0]) {
-				    comment_children[0].parentNode.removeChild(comment_children[0]);
-				    // comment_children[0].style.display = "none";
-				}
-				//replace with form
-	    		comment.innerHTML = comment.innerHTML + resp;
-			})
-    	}, false);
-    }
+    $(document).on('click', '.edit-this-comment', function() {
+		var comment_id = this.getAttribute('data-comment-id');
+    	var comment = $('#comment-' + comment_id);
+		//replace with editing dialogue
+		$.ajax({
+  			type: 'GET',
+  			url: '/edit/comment/' + comment_id,
+  			success: function(resp) {
+  				comment.children().hide();
+  				comment.append(resp);
+  			}
+		});
+    });
 
-}, false);
+});
