@@ -66,6 +66,38 @@ class ThreadController extends BaseController {
 		}
 	}
 
+	public function editThreadForm($thread_id) {
+		if (!$thread = Thread::find($thread_id)) {
+			//thread doesn't exist
+			return;
+		}
+		return View::make('editthreadform', array('thread' => $thread));
+	}
+
+	public function editThread($thread_id) {
+		$input = Input::only('body');
+		$user = Sentry::getUser();
+		if (!$thread = Thread::find($thread_id)) {
+			//thread doesn't exist
+			return Redirect::to('/');
+		}
+		$validator = Validator::make(
+			$input,
+			array(
+				'body' => array('required', 'min:25', 'max:2500')
+			)
+		);
+		if ($validator->passes()) {
+			$thread->body_raw = Wordfilter::filter(e($input['body']));
+			$thread->body = Wordfilter::filter(BBCoder::convert(e($input['body']))); //apply BBCode to generate HTML and store it
+			$thread->save();
+			return Redirect::to('thread/' . $thread->id . '/' . $thread->slug); //don't use Redirect::back()
+		} else {
+			//fix this
+			return Redirect::to('thread/' . $thread->id . '/' . $thread->slug)->withInput()->withErrors($validator);
+		}
+	}
+
 	public function quoteThread($thread_id) {
 		if (!$thread = Thread::find($thread_id)) {
 			//thread doesn't exist
