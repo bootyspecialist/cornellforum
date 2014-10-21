@@ -4,28 +4,31 @@
 @stop
 @section('content')
 	<div class="col-md-12">
-		<div id="thread-intro">
+		<div id="thread-{{ $thread->id }}" class="thread-intro">
 			<h3 class="thread-title">{{{ $thread->title }}}</h3>
 			<h4 class="thread-subtitle">{{{ $thread->points }}} {{{ Lang::choice('point|points', $thread->points) }}},  {{{ $thread->comments()->count() }}} {{{ Lang::choice('comment|comments', $thread->comments()->count()) }}}, posted {{{ $thread->created_at->diffForHumans() }}}</h4>
-			<div class="thread-actions">
-				@if(Sentry::check())
-					@if(Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', 1)->exists())
-						<a class="btn btn-xs btn-info" href="#">Voted Up</a>
-					@else
-						<a class="btn btn-xs btn-default" href="/vote/{{{ $thread->id }}}/up">Vote Up</a>
+			<div class="thread-content">
+					<div class="thread-actions">
+					@if(Sentry::check())
+						@if(Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', 1)->exists())
+							<a class="btn btn-xs btn-info" href="#">Voted Up</a>
+						@else
+							<a class="btn btn-xs btn-default" href="/vote/{{{ $thread->id }}}/up">Vote Up</a>
+						@endif
+						@if(Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', -1)->exists())
+							<a class="btn btn-xs btn-danger" href="#">Voted Down</a>
+						@else
+							<a class="btn btn-xs btn-default{{ (Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30 ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/down">Vote Down</a>
+						@endif
+						<span class="quote-this-thread btn btn-xs btn-default" data-thread-id="{{ $thread->id }}">Quote</span>
+						@if(Sentry::getUser()->id == $thread->user_id)
+							<span class="edit-this-thread btn btn-xs btn-default" data-thread-id="{{ $thread->id }}">Edit</span>
+							<a href="/delete/thread/{{ $thread->id }}" class="btn btn-xs btn-default needs-confirmation">Delete</a>
+						@endif
 					@endif
-					@if(Vote::where('user_id', '=', Sentry::getUser()->id)->where('thread_id', '=', $thread->id)->where('sign', '=', -1)->exists())
-						<a class="btn btn-xs btn-danger" href="#">Voted Down</a>
-					@else
-						<a class="btn btn-xs btn-default{{ (Sentry::getUser()->created_at->diff(\Carbon\Carbon::now())->days >= 30 ? '' : ' disabled') }}" href="/vote/{{{ $thread->id }}}/down">Vote Down</a>
-					@endif
-					<span class="quote-this-thread btn btn-xs btn-default" data-thread-id="{{ $thread->id }}">Quote</span>
-					@if(Sentry::getUser()->id == $thread->user_id)
-						<a href="/delete/thread/{{ $thread->id }}" class="btn btn-xs btn-default needs-confirmation">Delete</a>
-					@endif
-				@endif
+				</div>
+				<div class="post-body">{{ $thread->body }}</div>
 			</div>
-			<div class="post-body">{{ $thread->body }}</div>
 		</div>
 		@if (count($comments) > 0)
 			<div id="comments">
