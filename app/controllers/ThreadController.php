@@ -74,7 +74,7 @@ class ThreadController extends BaseController {
 
 		$quote = trim(preg_replace('/\s+/', ' ', $thread->body_raw));
 		$quote = preg_replace('/\[quote\](.*?)\[\/quote\]/is', '', $quote);
-		$quote = preg_replace('/\[img\](.*?)\[\/img\]/is', "( $1 )\r\n\r\n", $quote);
+		$quote = preg_replace('/\[img\](.*?)\[\/img\]/is', "$1\r\n\r\n", $quote);
 		return Response::json(array('quote' => '[quote]' . $quote . "[/quote]\r\n\r\n"));
 	}
 
