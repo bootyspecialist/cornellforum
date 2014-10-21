@@ -71,7 +71,7 @@
 					{{ Form::open(array('url' => '/comment/' . $thread->id . '/new')) }}
 						<div class="outer-textarea-container">
 							<div class="form-group">
-								<label class="sr-only" for="body">Thread body:</label>
+								<label class="sr-only" for="body">Comment body:</label>
 								{{ Form::textarea('body', null, array('class' => 'form-control with-formatting-buttons', 'rows' => 12, 'placeholder' => 'Compose something interesting here...')) }}
 							</div>
 							<div class="formatting-buttons">
