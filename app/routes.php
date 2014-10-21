@@ -42,6 +42,16 @@ Route::get('quote/thread/{thread_id}', array(
 	'before' => 'Sentinel\auth',
 	'uses' => 'ThreadController@quoteThread'
 ))->where('thread_id', '[0-9]+');
+Route::get('edit/thread/{thread_id}', array(
+	'as' => 'edit_thread_form',
+	'before' => 'Sentinel\auth',
+	'uses' => 'ThreadController@editThreadForm'
+))->where('thread_id', '[0-9]+');
+Route::post('edit/thread/{thread_id}', array(
+	'as' => 'edit_thread',
+	'before' => 'Sentinel\auth',
+	'uses' => 'ThreadController@editThread'
+))->where('thread_id', '[0-9]+');
 
 //comments
 Route::post('comment/{thread_id}/new', array(
@@ -65,7 +75,7 @@ Route::get('edit/comment/{comment_id}', array(
 	'uses' => 'CommentController@editCommentForm'
 ))->where('comment_id', '[0-9]+');
 Route::post('edit/comment/{comment_id}', array(
-	'as' => 'retrieve_raw_comment_body',
+	'as' => 'edit_comment',
 	'before' => 'Sentinel\auth',
 	'uses' => 'CommentController@editComment'
 ))->where('comment_id', '[0-9]+');
