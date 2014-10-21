@@ -88,6 +88,30 @@ $(function() {
 		});
     });
 
+    //click handler to edit threads
+    $(document).on('click', '.edit-this-thread', function() {
+		var thread_id = this.getAttribute('data-thread-id');
+    	var thread = $('#thread-' + thread_id);
+		//replace with editing dialogue
+		$.ajax({
+  			type: 'GET',
+  			url: '/edit/thread/' + thread_id,
+  			success: function(resp) {
+  				thread.children('div.thread-content').hide();
+  				thread.append(resp);
+  			}
+		});
+    });
+
+    //click handler to stop editing a thread
+    $(document).on('click', 'span.dont-edit-this-thread', function() {
+		var thread_id = this.getAttribute('data-thread-id');
+    	var thread = $('#thread-' + thread_id);
+		//remove editing dialogue and bring everything back to normal
+		thread.children('#edit-thread-form').remove();
+		thread.children('div.thread-content').show();
+    });
+
     //click handler to quote comments
     $(document).on('click', '.quote-this-comment', function() {
 		var textarea = $('textarea.with-formatting-buttons');
