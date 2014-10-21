@@ -31,14 +31,6 @@ class CommentController extends BaseController {
 		}
 	}
 
-	public function retrieveRawBody($comment_id) {
-		if (!$comment = Comment::find($comment_id)) {
-			//comment doesn't exist
-			return Redirect::to('/');
-		}
-		return Response::json(array('body' => $comment->body_raw));
-	}
-
 	public function editCommentForm($comment_id) {
 		if (!$comment = Comment::find($comment_id)) {
 			//comment doesn't exist
