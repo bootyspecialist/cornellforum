@@ -43,20 +43,35 @@ $(function() {
             	prompt_action = 'text you want to quote';
                 break;
         }
+        bootbox.prompt('Enter the ' + prompt_action + ':', function(result) {
+        	if (!result) {
+	        	return; //user pressed the cancel button
+	        } else {
+	        	insertTextAtCursor(textarea, '[' + tag + ']' + result + '[/' + tag + ']');
+	        }
+        });
 
-        var text_to_insert = prompt('Enter the ' + prompt_action + ':');
-
-        if (!text_to_insert) {
-        	return; //user pressed the cancel button
-        } else {
-        	insertTextAtCursor(textarea, '[' + tag + ']' + text_to_insert + '[/' + tag + ']');
-        }
 	});
 
     //are you sure? click handler
-    $(document).on('click', '.needs-confirmation', function() {
+    $(document).on('click', '.needs-confirmation', function(e) {
+    	e.preventDefault();
+    	var currentAction = this.href; //have to do this weird hack because bootbox.js is async
 		bootbox.confirm('Are you sure you want to do this?', function(result) {
-			return result;
+			if (result) {
+				window.location = currentAction; //have to do this weird hack because bootbox.js is async
+			}
+		});
+    });
+
+    //logout confirmation
+    $(document).on('click', '.log-out-button', function(e) {
+    	e.preventDefault();
+    	var currentAction = this.href; //have to do this weird hack because bootbox.js is async
+		bootbox.confirm('Are you sure you want to log out? You won\'t be able to post anything, won\'t see notifications when there is new content and won\'t be able to vote on threads. You\'ll also have to remember your email/password to log back in. For best results, we don\'t recommend ever logging out. If you really want to log out, just click "OK" to continue.', function(result) {
+			if (result) {
+				window.location = currentAction; //have to do this weird hack because bootbox.js is async
+			}
 		});
     });
 
