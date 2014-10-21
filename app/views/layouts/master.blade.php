@@ -31,7 +31,7 @@
 							<li><a href="/frequently-asked-questions"><i class="fa fa-question-circle"></i></a></li>
 							@if (Sentry::check())
 								<li class="logged-in"><a href="/account"><i class="fa fa-check-square"></i></a></li>
-								<li><a title="Log Out" href="/logout"><i class="fa fa-sign-out"></i></a></li>
+								<li><a class="log-out-button" title="Log Out" href="/logout"><i class="fa fa-sign-out"></i></a></li>
 							@endif
 						</ul>
 					</div>
@@ -49,6 +49,7 @@
 			</div>
 		</div>
 		{{ HTML::script('//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js') }}
+		{{ HTML::script('//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js') }}
 		{{ HTML::script('/static/js/libraries.js') }}
 		{{ HTML::script('/static/js/cornellforum.js') }}
 	</body>
