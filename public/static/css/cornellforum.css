@@ -95,7 +95,7 @@ p.thread-index-subtitle {
 	color: #999;
 }
 
-div#thread-intro {
+div.thread-intro {
 	padding: 0;
 	margin: 0;
 	border-bottom: 1px dotted #ccc;
