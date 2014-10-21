@@ -172,7 +172,6 @@ div.post-body blockquote {
 }
 
 div.comment {
-	display: inline-block;
 	position:relative;
 	margin: 20px 0;
 	word-wrap: break-word;
@@ -231,6 +230,10 @@ div.comment-actions a:hover, div.comment-actions span:hover {
 
 #new-comment-form {
 	margin: 0;
+}
+
+#edit-comment-form {
+
 }
 
 #new-comment-form .checkbox {

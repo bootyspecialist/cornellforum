@@ -44,7 +44,7 @@ class CommentController extends BaseController {
 			//comment doesn't exist
 			return;
 		}
-		return Response::json(array('form' => '' . $comment->body_raw . ''));
+		return View::make('editcommentform', array('comment' => $comment));
 	}
 
 	public function editComment($comment_id) {

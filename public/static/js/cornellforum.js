@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 			//replace with editing dialogue
 	    	reqwest('/edit/comment/' + comment_id, function(resp) {
 	    		console.log(resp);
-	    		comment.innerHTML = resp.body;
+	    		comment.innerHTML = resp;
 			})
     	}, false);
     }
