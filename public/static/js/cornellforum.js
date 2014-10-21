@@ -2,30 +2,18 @@ $(function() {
 
 	//inserts text to an element at cursor position
 	function insertTextAtCursor(el, text) {
-	    var val = el.value, endIndex, range, doc = el.ownerDocument;
-	    if (typeof el.selectionStart == "number"
-	            && typeof el.selectionEnd == "number") {
-	        endIndex = el.selectionEnd;
-	        el.value = val.slice(0, endIndex) + text + val.slice(endIndex);
-	        el.selectionStart = el.selectionEnd = endIndex + text.length;
-	    } else if (doc.selection != "undefined" && doc.selection.createRange) {
-	        el.focus();
-	        range = doc.selection.createRange();
-	        range.collapse(false);
-	        range.text = text;
-	        range.select();
-	    }
+        var cursorPos = el.prop('selectionStart');
+        var v = el.val();
+        var textBefore = v.substring(0, cursorPos);
+        var textAfter = v.substring(cursorPos, v.length);
+        el.val( textBefore + text + textAfter);
 	}
 
-	//finds y value of given element
-	function findPos(elem) {
-	    var curtop = 0;
-	    if (elem.offsetParent) {
-	        do {
-	            curtop += elem.offsetTop;
-	        } while (elem = elem.offsetParent);
-	    return [curtop];
-	    }
+	//function to scroll to an element
+	function scrollToElement(el) {
+		$('html, body').animate({
+	        scrollTop: el.offset().top
+	    }, 600);
 	}
 
 	//formatting buttons click handler
@@ -67,7 +55,9 @@ $(function() {
 
     //are you sure? click handler
     $(document).on('click', '.needs-confirmation', function() {
-		return window.confirm('Are you sure you want to do this?');
+		bootbox.confirm('Are you sure you want to do this?', function(result) {
+			return result;
+		});
     });
 
     //click handler to quote threads
@@ -78,7 +68,7 @@ $(function() {
   			url: '/quote/thread/' + this.getAttribute('data-thread-id'),
   			success: function(resp) {
   				insertTextAtCursor(textarea, resp.quote);
-    			window.scroll(0, findPos(textarea));
+    			scrollToElement(textarea);
   			}
 		});
     });
@@ -91,7 +81,7 @@ $(function() {
   			url: '/quote/comment/' + this.getAttribute('data-comment-id'),
   			success: function(resp) {
   				insertTextAtCursor(textarea, resp.quote);
-    			window.scroll(0, findPos(textarea));
+    			scrollToElement(textarea);
   			}
 		});
     });
