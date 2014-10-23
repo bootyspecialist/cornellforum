@@ -20,7 +20,7 @@ class CreateThreadsTable extends Migration {
 			$table->string('slug');
 			$table->integer('user_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
-			$table->integer('points')->unsigned()->default(1);
+			$table->integer('points')->default(1);
 			$table->smallInteger('sticky')->default(0);
 			$table->timestamps();
 		});
