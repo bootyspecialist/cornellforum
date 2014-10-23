@@ -9,14 +9,15 @@ class VoteController extends BaseController {
 
 		$user = Sentry::getUser();
 		if (Vote::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->exists()) {
-			if ($old_vote = Vote::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->first()->sign == 1) {
+			$old_vote = Vote::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->first();
+			if ($old_vote->sign == 1) {
 				//already upvoted
 				return "You have already voted this thread up!";
 			} else {
 				//prevously downvoted, let's change it to an upvote
 				$old_vote->sign = 1;
 				$old_vote->save();
-				$thread->points = $thread->points + 2; //subtract two from thread points (erase previous downvote)
+				$thread->points = $thread->points + 2; //add two to thread points (erase previous downvote)
 				$thread->save();
 				return Redirect::to('thread/' . $thread->id . '/' . $thread->slug); //don't use Redirect::back()
 			}
@@ -49,11 +50,12 @@ class VoteController extends BaseController {
 		}
 
 		if (Vote::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->exists()) {
-			if ($old_vote = Vote::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->first()->sign == -1) {
+			$old_vote = Vote::where('user_id', '=', $user->id)->where('thread_id', '=', $thread->id)->first();
+			if ($old_vote->sign == -1) {
 				//already downvoted
 				return "You have already voted this thread down!";
 			} else {
-				//prevously downvoted, let's change it to an upvote
+				//prevously upvoted, let's change it to an downvote
 				$old_vote->sign = -1;
 				$old_vote->save();
 				$thread->points = $thread->points - 2; //subtract two from thread points (erase previous upvote)
