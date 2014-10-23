@@ -124,7 +124,7 @@ div#reply-area {
 	margin: 0 0 25px 0;
 }
 
-h3.thread-title {
+h3.thread-title, input.thread-title {
 	font-size: 20px;
 	margin: 5px 0 5px 0;
 }
