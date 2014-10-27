@@ -19,7 +19,7 @@
 					</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li><a href="/search"><i class="fa fa-search"></i> Search</a></li>
+							<!--<li><a href="/search"><i class="fa fa-search"></i> Search</a></li>-->
 							@if (!Sentry::check())
 								<li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
 								<li><a href="/create-account"><i class="fa fa-user"></i> Create Account</a></li>
