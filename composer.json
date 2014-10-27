@@ -8,7 +8,8 @@
 		"rydurham/sentinel": "1.*",
 		"cviebrock/eloquent-sluggable": "2.*",
 		"hisorange/bbcoder": "dev-master",
-		"mews/captcha": "dev-master"
+		"mews/captcha": "dev-master",
+		"mmanos/laravel-search": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

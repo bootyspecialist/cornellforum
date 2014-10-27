@@ -124,7 +124,8 @@ return array(
 		'Sentinel\SentinelServiceProvider',
 		'Cviebrock\EloquentSluggable\SluggableServiceProvider',
 		'hisorange\bbcoder\Providers\BBCoderServiceProvider',
-		'Mews\Captcha\CaptchaServiceProvider'
+		'Mews\Captcha\CaptchaServiceProvider',
+		'Mmanos\Search\SearchServiceProvider'
 
 	),
 
@@ -192,7 +193,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-		'Captcha' 	      => 'Mews\Captcha\Facades\Captcha'
+		'Captcha' 	      => 'Mews\Captcha\Facades\Captcha',
+		'Search'          => 'Mmanos\Search\Facade'
 
 	),
 
