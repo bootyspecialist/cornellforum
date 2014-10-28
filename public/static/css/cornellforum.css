@@ -312,6 +312,10 @@ span.new-thread-notification, span.new-comment-notification {
 	margin: 0 0 0 5px;
 }
 
+a.no-account-yet {
+	margin-left: 10px;
+}
+
 /* tweak the way bootstrap looks for inputs */
 .form-control:focus{
     border-color: #ccc;
