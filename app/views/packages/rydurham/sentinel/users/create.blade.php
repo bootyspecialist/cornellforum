@@ -5,7 +5,7 @@
 @section('content')
     <div class="col-md-12">
         <h4 class="spacer">Create an account:</h4>
-        <p>Creating an account lets you post on Cornell Forum. All posts are <u>completely anonymous</u> and your email address is <u>never</u> displayed next to them. When you fill out the form below we'll send a verification link to the email address you entered. After validating your email once you can post forever!</p>
+        <p>Creating an account lets you post on Cornell Forum. All posts are <u>anonymous</u> and your account information is not displayed next to them. When you fill out the form below we'll send a verification link to your email address. After validating your email once you can post forever!</p>
     </div>
     <div class="col-sm-5">
         {{ Form::open(array('action' => 'Sentinel\UserController@store')) }}
@@ -28,7 +28,7 @@
             <div class="form-group">
                 <p><strong>Note:</strong> you won't be able to log in until you verify your email!</p>
             </div>
-            {{ Form::submit('Create account and send verification email', array('class' => 'btn btn-primary')) }}
+            {{ Form::submit('Create account', array('class' => 'btn btn-primary')) }}
         {{ Form::close() }}
     </div>
 @stop
