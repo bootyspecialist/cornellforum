@@ -71,17 +71,32 @@ li.logged-in a i {
 }
 
 div.thread-preview {
-	margin: 0 0 5px 0;
+	margin: 12px 0;
 	padding: 0;
+	word-wrap: break-word;
+}
+
+div.thread-user-frame {
+	float: left;
+	padding: 10px 15px;
+	border-radius: 5px;
+	background: rgba(0, 0, 0, 0.05);
+}
+
+div.thread-me div.thread-user-frame {
+	padding: 12px;
+	color: #666;
+	font-size: 13px;
 }
 
 div.thread-index-content {
 	display: inline-block;
 	float: left;
+	margin: 0 0 0 20px;
 }
 
 h2.thread-index-title {
-	margin: 5px 0 3px 0;
+	margin: 3px 0 1px 0;
 	font-size: 16px;
 }
 
@@ -99,7 +114,6 @@ div.thread-intro {
 	padding: 0;
 	margin: 0;
 	border-bottom: 1px dotted #ccc;
-
 }
 
 div#comments {
@@ -148,7 +162,7 @@ div.thread-actions .btn-default {
 }
 
 div.post-body {
-	margin: 5px 0 15px 0;
+	margin: 20px 0 20px 0;
 }
 
 div.comment div.post-body {
