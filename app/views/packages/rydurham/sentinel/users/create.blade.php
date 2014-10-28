@@ -5,7 +5,7 @@
 @section('content')
     <div class="col-md-12">
         <h4 class="spacer">Create an account:</h4>
-        <p>Creating an account lets you post on Cornell Forum. All posts are <u>anonymous</u> and your account information is not displayed next to them. When you fill out the form below we'll send a verification link to your email address. After validating your email once you can post forever!</p>
+        <p>Creating an account lets you post on Cornell Forum. All posts are <u>anonymous</u> and your account information is never displayed next to them. When you fill out the form below we'll send a verification link to your email address. After validating your email once you can post forever!</p>
     </div>
     <div class="col-sm-5">
         {{ Form::open(array('action' => 'Sentinel\UserController@store')) }}

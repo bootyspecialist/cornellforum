@@ -119,7 +119,7 @@
 					<div class="outer-textarea-container">
 						<div class="form-group">
 							<label class="sr-only" for="body">Thread body:</label>
-							{{ Form::textarea('body', null, array('class' => 'form-control', 'rows' => 6, 'placeholder' => 'Whoops! You need to log in or create an account to comment on this thread. Creating an account is quick and easy, we promise! See the buttons below to get started.', 'disabled')) }}
+							{{ Form::textarea('body', null, array('class' => 'form-control', 'rows' => 6, 'placeholder' => 'You need to log in or create an account to comment on this thread. If you don\'t have one already, creating an account is quick and easy!', 'disabled')) }}
 						</div>
 					</div>
 					<div class="form-group">
