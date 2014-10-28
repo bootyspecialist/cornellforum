@@ -89,6 +89,16 @@ div.thread-me div.thread-user-frame {
 	font-size: 13px;
 }
 
+@media (max-width: 768px) {
+    div.thread-user-frame {
+        display: none !important;
+    }
+
+    div.thread-index-content {
+		margin: 0;
+	}
+}
+
 div.thread-index-content {
 	display: inline-block;
 	float: left;
